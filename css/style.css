@@ -267,6 +267,93 @@ a.skipNaviBtn:active {
 #snb nav a:nth-child(5):hover {
   background: #8bc7ad url(../images/common/snb_5_on.png) 23px center no-repeat;
 }
+#snb.on .logo {
+  overflow: hidden;
+  width: 42px;
+  height: 55px;
+  padding: 0 0 15px 0;
+  margin: 18px auto 17px;
+  line-height: 0;
+  color: transparent;
+  font-size: 0;
+  text-indent: -999px;
+  border-bottom: 1px solid #84d4b1;
+  background: url(../images/common/logo_small.png) 0 0 no-repeat;
+}
+#snb.on nav {
+  width: 56px;
+  height: calc(100% - 360px);
+}
+#snb.on nav a {
+  overflow: hidden;
+  text-indent: -999px;
+  font-size: 0;
+  color: transparent;
+}
+#snb.on nav a:hover {
+  color: #0e5435;
+}
+#snb.on nav a:nth-child(1) {
+  background: url(../images/common/snb_1_off.png) center no-repeat;
+}
+#snb.on nav a:nth-child(1):hover {
+  background: #8bc7ad url(../images/common/snb_1_on.png) center no-repeat;
+}
+#snb.on nav a:nth-child(2) {
+  background: url(../images/common/snb_2_off.png) center no-repeat;
+}
+#snb.on nav a:nth-child(2):hover {
+  background: #8bc7ad url(../images/common/snb_2_on.png) center no-repeat;
+}
+#snb.on nav a:nth-child(3) {
+  background: url(../images/common/snb_3_off.png) center no-repeat;
+}
+#snb.on nav a:nth-child(3):hover {
+  background: #8bc7ad url(../images/common/snb_3_on.png) center no-repeat;
+}
+#snb.on nav a:nth-child(4) {
+  background: url(../images/common/snb_4_off.png) center no-repeat;
+}
+#snb.on nav a:nth-child(4):hover {
+  background: #8bc7ad url(../images/common/snb_4_on.png) center no-repeat;
+}
+#snb.on nav a:nth-child(5) {
+  background: url(../images/common/snb_5_off.png) center no-repeat;
+}
+#snb.on nav a:nth-child(5):hover {
+  background: #8bc7ad url(../images/common/snb_5_on.png) center no-repeat;
+}
+#snb.on #snbFooter {
+  width: 56px;
+}
+#snb.on #snbFooter a {
+  width: 56px;
+  overflow: hidden;
+  text-indent: -999px;
+  font-size: 0;
+  color: transparent;
+}
+#snb.on #snbFooter a:hover {
+  color: #0e5435;
+}
+#snb.on #snbFooter a:nth-child(1) {
+  background: url(../images/common/lnb_footer_1_off.png) center no-repeat;
+}
+#snb.on #snbFooter a:nth-child(1):hover {
+  background: #8bc7ad url(../images/common/lnb_footer_1_on.png) center no-repeat;
+}
+#snb.on #snbFooter a:nth-child(2) {
+  background: url(../images/common/lnb_footer_2_off.png) center no-repeat;
+}
+#snb.on #snbFooter a:nth-child(2):hover {
+  background: #8bc7ad url(../images/common/lnb_footer_2_on.png) center no-repeat;
+}
+#snb.on #snbFooter a:nth-child(3) {
+  background: url(../images/common/lnb_footer_3_off.png) center no-repeat;
+}
+#snb.on #snbFooter a:nth-child(3):hover {
+  background: #8bc7ad url(../images/common/lnb_footer_3_on.png) center no-repeat;
+}
 #snb #snbFooter {
   width: 100%;
   display: flex;
@@ -343,6 +430,38 @@ a.skipNaviBtn:active {
   width: 16px;
   height: 18px;
   background: url(../images/common/btn_hamberger.png) 0 0 no-repeat;
+}
+#contents #gnb .leftMenu .hoverMenu {
+  display: flex;
+  gap: 0 6px;
+  margin-left: 40px;
+}
+#contents #gnb .leftMenu .hoverMenu a {
+  width: 40px;
+  height: 43px;
+}
+#contents #gnb .leftMenu .hoverMenu a.btnDashboard {
+  background: url(../images/common/icon_dashboard.png) center 11px no-repeat;
+}
+#contents #gnb .leftMenu .hoverMenu a.btnFile {
+  background: url(../images/common/icon_file.png) center 11px no-repeat;
+}
+#contents #gnb .leftMenu .hoverMenu a.btnMail {
+  background: url(../images/common/icon_mail.png) center 11px no-repeat;
+}
+#contents #gnb .leftMenu .hoverMenu a.btnSchedule {
+  background: url(../images/common/icon_schedule.png) center 11px no-repeat;
+}
+#contents #gnb .leftMenu .hoverMenu:hover a {
+  padding: 27px 0 0 0;
+  text-indent: 0;
+  font-size: 10px;
+  color: #a4a4a4;
+  text-align: center;
+  background-position: center 0;
+}
+#contents #gnb .leftMenu .hoverMenu:hover a.btnFile {
+  color: #009956;
 }
 #contents #gnb .rightMenu {
   display: flex;
@@ -421,6 +540,15 @@ a.skipNaviBtn:active {
 }
 #contents .utilArea .location a:last-child::after {
   display: none;
+}
+#contents .utilArea .location a.functionBtn {
+  overflow: hidden;
+  text-indent: -999px;
+  font-size: 0;
+  color: transparent;
+  width: 18px;
+  height: 18px;
+  background: url(../images/common/icon_plus.png) 0 0 no-repeat;
 }
 #contents .utilArea .btnType {
   display: block;

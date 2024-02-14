@@ -40,6 +40,7 @@ $border_2:#84d4b1;
 $bg_1:#8bc7ad;
 $text_1:#baecd6;
 $text_2:#0e5435;
+$text_3:#a4a4a4;
 
 /* skip navigation */
 a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #ea0e15;color:var(--white_1);display:block;left:-200%;text-align:center;width:200px;padding:5px 0;border:1px solid var(--black_0);border-top:none;
@@ -58,7 +59,8 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
 
 /* layout */
 .wrap{display:flex;width:100%;min-width:1024px;}
-#snb{position:relative;z-index:2;display:flex;;flex-wrap:wrap;flex-direction: row;max-width:233px;height:100vh;background:$green;box-shadow: 0 0 9px 5px rgba(32,32,32,0.24);
+#snb{
+    position:relative;z-index:2;display:flex;flex-wrap:wrap;flex-direction: row;max-width:233px;height:100vh;background:$green;box-shadow: 0 0 9px 5px rgba(32,32,32,0.24);
     .logo{display:flex;align-items: center;width:calc(100% - 18px);height:74px;padding:0 0 0 24px;margin:0 auto 17px;line-height:1;color:$white;font-size:20px;font-weight:700;letter-spacing: -0.05em;border-bottom:1px solid $border_2;}
     nav{
         width:calc(100% - 18px);height:calc(100% - 360px);display:flex;flex-wrap:wrap;flex-direction:column;gap:3px 0;margin:0 auto;
@@ -82,6 +84,49 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
             }
             
         }
+    }
+    &.on{
+        .logo{overflow:hidden;width:42px;height:55px;padding:0 0 15px 0;margin:18px auto 17px;line-height:0;color:transparent;font-size:0;text-indent:-999px;border-bottom:1px solid $border_2;background:url(../images/common/logo_small.png) 0 0 no-repeat;}
+        nav{
+            width:56px;height:calc(100% - 360px);
+            a{
+                overflow:hidden;text-indent:-999px;font-size:0;color:transparent;
+                &:hover{color:$text_2;}
+                &:nth-child(1){background:url(../images/common/snb_1_off.png) center no-repeat;
+                    &:hover{background:$bg_1 url(../images/common/snb_1_on.png) center no-repeat;}
+                }
+                &:nth-child(2){background:url(../images/common/snb_2_off.png) center no-repeat;
+                    &:hover{background:$bg_1 url(../images/common/snb_2_on.png) center no-repeat;}
+                }
+                &:nth-child(3){background:url(../images/common/snb_3_off.png) center no-repeat;
+                    &:hover{background:$bg_1 url(../images/common/snb_3_on.png) center no-repeat;}
+                }
+                &:nth-child(4){background:url(../images/common/snb_4_off.png) center no-repeat;
+                    &:hover{background:$bg_1 url(../images/common/snb_4_on.png) center no-repeat;}
+                }
+                &:nth-child(5){background:url(../images/common/snb_5_off.png) center no-repeat;
+                    &:hover{background:$bg_1 url(../images/common/snb_5_on.png) center no-repeat;}
+                }
+                
+            }
+        }        
+        #snbFooter{
+            width:56px;
+            a{
+                width:56px;overflow:hidden;text-indent:-999px;font-size:0;color:transparent;
+                &:hover{color:$text_2;}
+                &:nth-child(1){background:url(../images/common/lnb_footer_1_off.png) center no-repeat;
+                    &:hover{background:$bg_1 url(../images/common/lnb_footer_1_on.png) center no-repeat;}
+                }
+                &:nth-child(2){background:url(../images/common/lnb_footer_2_off.png) center no-repeat;
+                    &:hover{background:$bg_1 url(../images/common/lnb_footer_2_on.png) center no-repeat;}
+                }
+                &:nth-child(3){background:url(../images/common/lnb_footer_3_off.png) center no-repeat;
+                    &:hover{background:$bg_1 url(../images/common/lnb_footer_3_on.png) center no-repeat;}
+                }
+                
+            }
+        }  
     }
     #snbFooter{
         width:100%;display:flex;flex-wrap:wrap;flex-direction:column;width:calc(100% - 18px);padding:23px 0 0 0;margin:auto auto 112px;border-top:1px solid $border_2;
@@ -113,6 +158,30 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
                     width:16px;height:18px;background:url(../images/common/btn_hamberger.png) 0 0 no-repeat;
                 }
             }
+            .hoverMenu{
+                display:flex;gap:0 6px;margin-left:40px;
+                a{
+                    width:40px;height:43px;
+                    &.btnDashboard{
+                        background:url(../images/common/icon_dashboard.png) center 11px no-repeat;
+                    }
+                    &.btnFile{
+                        background:url(../images/common/icon_file.png) center 11px no-repeat;
+                    }
+                    &.btnMail{
+                        background:url(../images/common/icon_mail.png) center 11px no-repeat;
+                    }
+                    &.btnSchedule{
+                        background:url(../images/common/icon_schedule.png) center 11px no-repeat;
+                    }
+                }
+                &:hover{
+                    a{padding:27px 0 0 0;text-indent:0;font-size:10px;color:$text_3;text-align:center;background-position:center 0;
+                        &.btnFile{color:$green}
+                    }
+                    
+                }
+            }
         }
         .rightMenu{
             display:flex;align-items:center;margin-left:auto;justify-content: flex-end;padding-right:21px;gap:0 28px;
@@ -141,6 +210,9 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
                     }
                 }
                 &:last-child::after{display:none}
+                &.functionBtn{
+                    overflow:hidden;text-indent:-999px;font-size:0;color:transparent;width:18px;height:18px;background:url(../images/common/icon_plus.png) 0 0 no-repeat;
+                }
             }         
         }
         .btnType{
