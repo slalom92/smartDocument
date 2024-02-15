@@ -124,6 +124,10 @@ select, input {
   overflow: hidden;
 }
 
+.hide {
+  display: none;
+}
+
 /* align */
 .center {
   text-align: center;
@@ -186,7 +190,6 @@ a.skipNaviBtn:active {
 .wrap {
   display: flex;
   width: 100%;
-  min-width: 1024px;
 }
 
 #snb {
@@ -658,14 +661,354 @@ a.skipNaviBtn:active {
   letter-spacing: 0.02em;
   border-bottom: 1px solid #e1e6ea;
 }
-#contents table.colTable tbody td {
+#contents table.colTable tbody tr td {
   height: 53px;
   font-size: 15.3px;
   letter-spacing: 0.02em;
   border-bottom: 1px solid #e1e6ea;
 }
+#contents table.colTable tbody tr:hover td {
+  background: #f4f6f7;
+}
 #contents table.colTable tfoot td {
   height: 53px;
   font-size: 15.3px;
   letter-spacing: 0.02em;
+}
+#contents .changeInput {
+  width: 100%;
+  height: 37px;
+  font-size: 15.5px;
+  background: #fff;
+  border: 1px solid #ff701e;
+  border-radius: 6px;
+}
+
+/* right click */
+.contextBox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 206px;
+  padding: 19px;
+  background: #fff;
+  border: 1px solid #e1e6ea;
+  border-radius: 6px;
+}
+.contextBox a {
+  display: block;
+  height: 26px;
+  padding: 0 0 0 35px;
+  line-height: 26px;
+  font-size: 15px;
+  color: #222;
+}
+.contextBox a.closeBtn {
+  position: absolute;
+  z-index: 10;
+  top: 14px;
+  right: 13px;
+  padding: 0;
+  width: 13px;
+  height: 13px;
+  margin-top: 0;
+  background: url(../images/common/icon_close.png) 0 0 no-repeat;
+}
+.contextBox a:nth-child(1) {
+  background: url(../images/common/context_1.png) 0 0 no-repeat;
+}
+.contextBox a:nth-child(2) {
+  background: url(../images/common/context_2.png) 0 0 no-repeat;
+}
+.contextBox a:nth-child(3) {
+  background: url(../images/common/context_3.png) 0 0 no-repeat;
+}
+.contextBox a:nth-child(4) {
+  background: url(../images/common/context_4.png) 0 0 no-repeat;
+}
+.contextBox a:nth-child(5) {
+  background: url(../images/common/context_5.png) 0 0 no-repeat;
+}
+.contextBox a:nth-child(6) {
+  background: url(../images/common/context_6.png) 0 0 no-repeat;
+}
+.contextBox a:nth-child(7) {
+  background: url(../images/common/context_7.png) 0 0 no-repeat;
+}
+.contextBox a + a {
+  margin-top: 17px;
+}
+
+/* 공유&활동 레이어 */
+.shareActiveLayer {
+  display: none;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  z-index: 9;
+  width: 482px;
+  height: 321px;
+  padding: 10px 24px 22px 24px;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
+}
+.shareActiveLayer .tabArea {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.shareActiveLayer .tabArea a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 6px;
+  padding: 13px 0;
+  width: 175px;
+  font-size: 17px;
+  text-align: center;
+}
+.shareActiveLayer .tabArea a.on {
+  color: #222;
+  border-bottom: 2px solid #009956;
+}
+.shareActiveLayer .tabArea a.off {
+  color: #777;
+  border-bottom: 2px solid transparent;
+}
+.shareActiveLayer .tabArea a:nth-child(1).on::before {
+  content: "";
+  display: block;
+  width: 21px;
+  height: 18px;
+  background: url(../images/common/icon_share_on.png) 0 0 no-repeat;
+}
+.shareActiveLayer .tabArea a:nth-child(1).off::before {
+  content: "";
+  display: block;
+  width: 21px;
+  height: 18px;
+  background: url(../images/common/icon_share_off.png) 0 0 no-repeat;
+}
+.shareActiveLayer .tabArea a:nth-child(2).on::before {
+  content: "";
+  display: block;
+  width: 21px;
+  height: 18px;
+  background: url(../images/common/icon_activ_on.png) 0 0 no-repeat;
+}
+.shareActiveLayer .tabArea a:nth-child(2).off::before {
+  content: "";
+  display: block;
+  width: 21px;
+  height: 18px;
+  background: url(../images/common/icon_activ_off.png) 0 0 no-repeat;
+}
+.shareActiveLayer .tabArea a::before {
+  margin-top: 4px;
+}
+.shareActiveLayer .tabView {
+  display: none;
+  width: 100%;
+  padding: 10px 0 0 0;
+}
+.shareActiveLayer .tabView.shareArea {
+  display: block;
+}
+.shareActiveLayer .tabView .searchUser {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  padding: 0 0 0 53px;
+  color: #222;
+  font-size: 15px;
+  background: #fafafa url(../images/common/icon_search.png) 20px 11px no-repeat;
+  border: 1px solid #e1e6ea;
+  border-radius: 4px;
+}
+.shareActiveLayer .tabView .userList {
+  overflow-y: auto;
+  height: 178px;
+  padding: 12px 19px;
+  margin: 5px auto 0;
+  border: 1px solid #e1e6ea;
+  border-radius: 4px;
+  background: #fff;
+}
+.shareActiveLayer .tabView .userList li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.shareActiveLayer .tabView .userList li a {
+  font-size: 15px;
+  color: #222;
+}
+.shareActiveLayer .tabView .userList li + li {
+  margin-top: 14px;
+}
+.shareActiveLayer .tabView .activeList {
+  overflow-y: auto;
+  height: 226px;
+  padding: 12px 19px;
+  margin: 5px auto 0;
+  border: 1px solid #e1e6ea;
+  border-radius: 4px;
+  background: #fff;
+}
+.shareActiveLayer .tabView .activeList li {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+.shareActiveLayer .tabView .activeList li i {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+.shareActiveLayer .tabView .activeList li i.icon_1 {
+  background: url(../images/common/icon_favorite.png) 0 0 no-repeat;
+}
+.shareActiveLayer .tabView .activeList li i.icon_2 {
+  background: url(../images/common/icon_refresh.png) 0 0 no-repeat;
+}
+.shareActiveLayer .tabView .activeList li i.icon_3 {
+  background: url(../images/common/icon_ex.png) 0 0 no-repeat;
+}
+.shareActiveLayer .tabView .activeList li i.icon_4 {
+  background: url(../images/common/icon_add.png) 0 0 no-repeat;
+}
+.shareActiveLayer .tabView .activeList li .detail {
+  padding: 0 6px;
+  width: 250px;
+  font-size: 14.5px;
+  color: #222;
+}
+.shareActiveLayer .tabView .activeList li .status {
+  width: 66px;
+  font-size: 14.5px;
+  color: #222;
+}
+.shareActiveLayer .tabView .activeList li .date {
+  width: 60px;
+  text-align: right;
+  font-size: 14.5px;
+  color: #222;
+}
+.shareActiveLayer .tabView .activeList li + li {
+  margin-top: 14px;
+}
+.shareActiveLayer .closeBtn {
+  position: absolute;
+  z-index: 10;
+  top: 14px;
+  right: 21px;
+  padding: 0;
+  width: 13px;
+  height: 13px;
+  margin-top: 0;
+  background: url(../images/common/icon_close.png) 0 0 no-repeat;
+}
+
+/* 이동 복사 레이어 */
+.folderMoveLayer {
+  display: none;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  z-index: 9;
+  width: 472px;
+  height: 411px;
+  padding: 10px 24px 22px 24px;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
+}
+.folderMoveLayer h2 {
+  display: inline-block;
+  padding: 15px 90px 15px 20px;
+  font-weight: normal;
+  font-size: 17px;
+  color: #222;
+  border-bottom: 2px solid #009956;
+}
+.folderMoveLayer .folderMoveContents {
+  overflow-y: auto;
+  height: 281px;
+  margin: 10px 0 0 0;
+  border: 1px solid #e1e6ea;
+  border-radius: 4px;
+  background: #fff;
+}
+.folderMoveLayer .colTable {
+  table-layout: fixed;
+  width: 100%;
+}
+.folderMoveLayer .colTable thead th {
+  line-height: 29px;
+  text-align: center;
+  font-size: 11px;
+  color: #222;
+}
+.folderMoveLayer .colTable thead th.alignLeft {
+  padding-left: 20px;
+  text-align: left;
+}
+.folderMoveLayer .colTable tbody td {
+  text-align: center;
+  line-height: 41px;
+  font-size: 15px;
+  color: #222;
+  border-bottom: 1px solid #e1e6ea;
+}
+.folderMoveLayer .colTable tbody td.alignLeft {
+  padding-left: 20px;
+  text-align: left;
+}
+.folderMoveLayer .colTable tbody td .icon_folder {
+  display: inline-block;
+  width: 21px;
+  height: 18px;
+  margin-right: 7px;
+  vertical-align: middle;
+  background: url(../images/common/icon_folder_small.png) 0 0 no-repeat;
+}
+.folderMoveLayer .colTable tbody tr:last-child td {
+  border-bottom: none;
+}
+.folderMoveLayer .btnsWrap {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0 7px;
+  padding: 13px 0 0 0;
+}
+.folderMoveLayer .btnsWrap a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 27px;
+  padding: 0 24px;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 4px;
+}
+.folderMoveLayer .btnsWrap a.btnCopy {
+  background: #ff701e;
+}
+.folderMoveLayer .btnsWrap a.btnMove {
+  background: #7860f4;
+}
+.folderMoveLayer .closeBtn {
+  position: absolute;
+  z-index: 10;
+  top: 14px;
+  right: 21px;
+  padding: 0;
+  width: 13px;
+  height: 13px;
+  margin-top: 0;
+  background: url(../images/common/icon_close.png) 0 0 no-repeat;
 }/*# sourceMappingURL=style.css.map */

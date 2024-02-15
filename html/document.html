@@ -106,8 +106,8 @@
                         </th>
                     </tr>
                 </thead>
-                <tbod>
-                    <tr>
+                <tbody>
+                    <tr class="rightClickable">
                         <td class="center">
                             <input type="checkbox" name="" title="선택" class="checkboxType1"/>
                         </td>
@@ -115,7 +115,7 @@
                             <a href="#"><img src="../images/common/icon_folder.png" alt="폴더"/></a>
                         </td>
                         <td class="pl20">
-                            <a href="#">폴더명</a>
+                            <div class="folderName">폴더명</div>
                         </td>
                         <td class="center">
                             <a href="#"><img src="../images/common/icon_share.png" alt=""/></a>
@@ -126,7 +126,26 @@
                         <td class="alignRight">4.6 MB</td>
                         <td class="pl20">5시간 전</td>
                     </tr>
-                </tbod>
+                    <tr class="rightClickable">
+                        <td class="center">
+                            <input type="checkbox" name="" title="선택" class="checkboxType1"/>
+                        </td>
+                        <td class="alignRight">
+                            <a href="#"><img src="../images/common/icon_folder.png" alt="폴더"/></a>
+                        </td>
+                        <td class="pl20">
+                            <div class="folderName">폴더명</div>
+                        </td>
+                        <td class="center">
+                            <a href="#"><img src="../images/common/icon_share.png" alt=""/></a>
+                        </td>
+                        <td class="center">
+                            <a href="#"><img src="../images/common/icon_3dot.png" alt=""/></a>
+                        </td>
+                        <td class="alignRight">4.6 MB</td>
+                        <td class="pl20">5시간 전</td>
+                    </tr>
+                </tbody>
             </table>
         </section>
         <!-- //footer -->
@@ -134,6 +153,145 @@
         <!-- footer// -->
     </section>
     <!-- contents// -->
+    <!-- //right click -->
+    <section class="contextBox">
+        <a href="#" onclick="init.openLayer('shareActiveLayer');return false;">공유하기</a>
+        <a href="#">즐겨찾기 추가</a>
+        <a href="#" class="changeName">이름 바꾸기</a>
+        <a href="#" onclick="init.openLayer('folderMoveLayer');return false;">이동 또는 복사</a>
+        <a href="#">다운로드</a>
+        <a href="#">다른이름으로 저장</a>
+        <a href="#">파일 삭제</a>
+        <a href="#" class="closeBtn"><span class="ir">닫기</span></a>
+    </section>
+    <!-- right click// -->
+
+    <!-- //공유,활동 팝업 -->
+    <section class="shareActiveLayer" id="shareActiveLayer">
+        <div class="tabArea">
+            <a href="#" class="on">공유</a>
+            <a href="#" class="off">활동</a>
+        </div>
+        <div class="tabView shareArea">
+            <form>
+                <input type="text" placeholder="공유할 사람 검색" class="searchUser"/>
+                <input type="submit" class="hide"/>
+            </form>
+            <ul class="userList">
+                <li><i><img src="../images/common/icon_user.png" alt=""/></i><a href="#">honeybee</a></li>
+                <li><i><img src="../images/common/icon_user.png" alt=""/></i><a href="#">honeybee</a></li>
+                <li><i><img src="../images/common/icon_user.png" alt=""/></i><a href="#">honeybee</a></li>
+                <li><i><img src="../images/common/icon_user.png" alt=""/></i><a href="#">honeybee</a></li>
+                <li><i><img src="../images/common/icon_user.png" alt=""/></i><a href="#">honeybee</a></li>
+                <li><i><img src="../images/common/icon_user.png" alt=""/></i><a href="#">honeybee</a></li>
+            </ul>
+        </div>
+        <div class="tabView activeArea">
+            <ul class="activeList">
+                <li>
+                    <i class="icon_1"></i>
+                    <div class="detail">즐겨찾기에 추가됨</div>
+                    <span class="status"></span>
+                    <span class="date">9일 전</span>
+                </li>
+                <li>
+                    <i class="icon_2"></i>
+                    <div class="detail">내가 Nextcloud flyer.pdf</div>
+                    <span class="status">복원</span>
+                    <span class="date">9일 전</span>
+                </li>
+                <li>
+                    <i class="icon_3"></i>
+                    <div class="detail">Nextcloud flyer.pdf</div>
+                    <span class="status">삭제함</span>
+                    <span class="date">7달 전</span>
+                </li>
+                <li>
+                    <i class="icon_4"></i>
+                    <div class="detail">Nextcloud flyer.pdf</div>
+                    <span class="status">만듦</span>
+                    <span class="date">7달 전</span>
+                </li>
+                <li>
+                    <i class="icon_1"></i>
+                    <div class="detail">즐겨찾기에 추가됨</div>
+                    <span class="status"></span>
+                    <span class="date">9일 전</span>
+                </li>
+                <li>
+                    <i class="icon_2"></i>
+                    <div class="detail">내가 Nextcloud flyer.pdf</div>
+                    <span class="status">복원</span>
+                    <span class="date">9일 전</span>
+                </li>
+                <li>
+                    <i class="icon_3"></i>
+                    <div class="detail">Nextcloud flyer.pdf</div>
+                    <span class="status">삭제함</span>
+                    <span class="date">7달 전</span>
+                </li>
+                <li>
+                    <i class="icon_4"></i>
+                    <div class="detail">Nextcloud flyer.pdf</div>
+                    <span class="status">만듦</span>
+                    <span class="date">7달 전</span>
+                </li>
+            </ul>            
+        </div>
+        <a href="#" class="closeBtn" onclick="init.closeLayer('shareActiveLayer');return false;"><span class="ir">닫기</span></a>
+    </section>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.shareActiveLayer .tabArea a').bind('click',function(){
+                let clickIdx = $(this).index();
+                $('.shareActiveLayer .tabArea a').removeClass('on').addClass('off').eq(clickIdx).removeClass('off').addClass('on');
+                $('.shareActiveLayer .tabView').hide().eq(clickIdx).show();
+            });
+        });
+    </script>
+    <!-- 공유,활동 팝업// -->
+    <!-- //폴더 선택 팝업 -->
+    <section class="folderMoveLayer" id="folderMoveLayer">
+        <h2>폴더 선택</h2>
+        <div class="folderMoveContents">
+            <table class="colTable">
+                <colgroup>
+                    <col style="width:auto"/>
+                    <col style="width:90px"/>
+                    <col style="width:90px"/>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col" class="alignLeft">이름</th>
+                        <th scope="col">크기</th>
+                        <th scope="col">수정한 날짜</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="alignLeft">
+                            <i class="icon_folder"></i> 폴더
+                        </td>
+                        <td>4.6 MB</td>
+                        <td>9일 전</td>
+                    </tr>
+                    <tr>
+                        <td class="alignLeft">
+                            <i class="icon_folder"></i> 폴더
+                        </td>
+                        <td>4.6 MB</td>
+                        <td>9일 전</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="btnsWrap">
+            <a href="#" class="btnCopy">복사</a>
+            <a href="#" class="btnMove">이동</a>
+        </div>
+        <a href="#" class="closeBtn" onclick="init.closeLayer('folderMoveLayer');return false;"><span class="ir">닫기</span></a>
+    </section>
+    <!-- 폴더 선택 팝업// -->
 </div>
 </body>
 </html>

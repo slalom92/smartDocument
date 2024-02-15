@@ -25,6 +25,7 @@ select,input{vertical-align:middle;font-family: 'Noto Sans KR', sans-serif}
 .inlineBlock{display:inline-block;*zoom:1;*display:inline;}
 .clear{clear:both}
 .overHidden{overflow:hidden}
+.hide{display:none}
 
 /* align */
 .center{text-align:center;}
@@ -35,6 +36,7 @@ select,input{vertical-align:middle;font-family: 'Noto Sans KR', sans-serif}
 $white:#fff;
 $green:#009956;
 $gray:#f4f6f7;
+$orange : #ff701e;
 $border_1:#e1e6ea;
 $border_2:#84d4b1;
 $bg_1:#8bc7ad;
@@ -58,7 +60,7 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
 .mt30{margin-top:30px;}
 
 /* layout */
-.wrap{display:flex;width:100%;min-width:1024px;}
+.wrap{display:flex;width:100%;}
 #snb{
     position:relative;z-index:2;display:flex;flex-wrap:wrap;flex-direction: row;max-width:233px;height:100vh;background:$green;box-shadow: 0 0 9px 5px rgba(32,32,32,0.24);
     .logo{display:flex;align-items: center;width:calc(100% - 18px);height:74px;padding:0 0 0 24px;margin:0 auto 17px;line-height:1;color:$white;font-size:20px;font-weight:700;letter-spacing: -0.05em;border-bottom:1px solid $border_2;}
@@ -263,11 +265,160 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
                 th{height:53px;font-size:15.3px;letter-spacing:0.02em;border-bottom:1px solid $border_1}
             }
             tbody{
-                td{height:53px;font-size:15.3px;letter-spacing:0.02em;border-bottom:1px solid $border_1}
+                tr{
+                    td{height:53px;font-size:15.3px;letter-spacing:0.02em;border-bottom:1px solid $border_1}
+                    &:hover td{
+                        background:$gray;
+                    }
+                }
             }
             tfoot{
                 td{height:53px;font-size:15.3px;letter-spacing:0.02em;}
             }
         }
+    }
+    .changeInput{width:100%;height:37px;font-size:15.5px;background:$white;border:1px solid $orange;border-radius:6px;}
+}
+/* right click */
+.contextBox{
+    display:none;position:fixed;top:0;left:0;z-index:9;width:206px;padding:19px;background:$white;border:1px solid $border_1;border-radius:6px;
+    a{
+        display:block;height:26px;padding:0 0 0 35px;line-height:26px;font-size:15px;color:#222;
+        &.closeBtn{
+            position:absolute;z-index:10;top:14px;right:13px;padding:0;width:13px;height:13px;margin-top:0;background:url(../images/common/icon_close.png) 0 0 no-repeat;
+        }
+        &:nth-child(1){background:url(../images/common/context_1.png) 0 0 no-repeat;}
+        &:nth-child(2){background:url(../images/common/context_2.png) 0 0 no-repeat;}
+        &:nth-child(3){background:url(../images/common/context_3.png) 0 0 no-repeat;}
+        &:nth-child(4){background:url(../images/common/context_4.png) 0 0 no-repeat;}
+        &:nth-child(5){background:url(../images/common/context_5.png) 0 0 no-repeat;}
+        &:nth-child(6){background:url(../images/common/context_6.png) 0 0 no-repeat;}
+        &:nth-child(7){background:url(../images/common/context_7.png) 0 0 no-repeat;}
+        &+a{margin-top:17px;}
+    }
+}
+
+/* 공유&활동 레이어 */
+.shareActiveLayer{
+    display:none;position:fixed;top:50vh;left:50vw;z-index:9;width:482px;height:321px;padding:10px 24px 22px 24px;transform: translate(-50%,-50%); background:$white;box-shadow: 0 0 10px rgba(0,0,0,0.09);
+    .tabArea{
+        display:flex;justify-content: space-between;width:100%;
+        a{
+            display:flex;justify-content: center;align-items: center;gap:0 6px;padding:13px 0;width:175px;font-size:17px;text-align:center;
+            &.on{
+                color:#222;border-bottom:2px solid $green;
+            }
+            &.off{
+                color:#777;border-bottom:2px solid transparent;
+            }
+            &:nth-child(1){
+                &.on{
+                    &::before{content:'';display:block;width:21px;height:18px;background:url(../images/common/icon_share_on.png) 0 0 no-repeat;}
+                }
+                &.off{
+                    &::before{content:'';display:block;width:21px;height:18px;background:url(../images/common/icon_share_off.png) 0 0 no-repeat;}
+                }
+            }
+            &:nth-child(2){
+                &.on{
+                    &::before{content:'';display:block;width:21px;height:18px;background:url(../images/common/icon_activ_on.png) 0 0 no-repeat;}
+                }
+                &.off{
+                    &::before{content:'';display:block;width:21px;height:18px;background:url(../images/common/icon_activ_off.png) 0 0 no-repeat;}
+                }
+            }
+            &::before{margin-top:4px}
+        }
+    }
+    .tabView{
+        display:none;width:100%;padding:10px 0 0 0;
+        &.shareArea{
+            display:block;
+        }
+        .searchUser{
+            display:flex;align-items:center;width:100%;height:40px;padding:0 0 0 53px;color:#222;font-size:15px;background:#fafafa url(../images/common/icon_search.png) 20px 11px no-repeat;border:1px solid $border_1;border-radius:4px;
+        }
+        .userList{
+            overflow-y:auto;height:178px;padding:12px 19px;margin:5px auto 0;border:1px solid $border_1;border-radius:4px;background:$white;
+            li{
+                display:flex;align-items: center;gap:8px;
+                a{
+                    font-size:15px;color:#222;
+                }
+                &+li{
+                    margin-top:14px;
+                }
+            }
+        }
+        .activeList{
+            overflow-y:auto;height:226px;padding:12px 19px;margin:5px auto 0;border:1px solid $border_1;border-radius:4px;background:$white;
+            li{
+                display:flex;align-items:flex-start;width:100%;
+                i{
+                    display:block;width:18px;height:18px;
+                    &.icon_1{background:url(../images/common/icon_favorite.png) 0 0 no-repeat;}
+                    &.icon_2{background:url(../images/common/icon_refresh.png) 0 0 no-repeat;}
+                    &.icon_3{background:url(../images/common/icon_ex.png) 0 0 no-repeat;}
+                    &.icon_4{background:url(../images/common/icon_add.png) 0 0 no-repeat;}
+                }
+                .detail{padding:0 6px;width:250px;font-size:14.5px;color:#222;}
+                .status{width:66px;font-size:14.5px;color:#222;}
+                .date{width:60px;text-align:right;font-size:14.5px;color:#222;}
+                &+li{
+                    margin-top:14px;
+                }
+            }
+        }
+    }
+    .closeBtn{
+        position:absolute;z-index:10;top:14px;right:21px;padding:0;width:13px;height:13px;margin-top:0;background:url(../images/common/icon_close.png) 0 0 no-repeat;
+    }
+}
+/* 이동 복사 레이어 */
+.folderMoveLayer{
+    display:none;position:fixed;top:50vh;left:50vw;z-index:9;width:472px;height:411px;padding:10px 24px 22px 24px;transform: translate(-50%,-50%); background:$white;box-shadow: 0 0 10px rgba(0,0,0,0.09);
+    h2{
+        display:inline-block;padding:15px 90px 15px 20px;font-weight:normal;font-size:17px;color:#222;border-bottom:2px solid $green;
+    }
+    .folderMoveContents{
+        overflow-y:auto;height:281px;margin:10px 0 0 0;border:1px solid $border_1;border-radius:4px;background:$white;
+    }
+    .colTable{
+        table-layout: fixed;width:100%;
+        thead{
+            th{
+                line-height:29px;text-align:center;font-size:11px;color:#222;
+                &.alignLeft{
+                    padding-left:20px;text-align:left;
+                }
+            }
+        }
+        tbody{
+            td{
+                text-align:center;line-height:41px;font-size:15px;color:#222;border-bottom:1px solid $border_1;
+                &.alignLeft{
+                    padding-left:20px;text-align:left;
+                }
+                .icon_folder{
+                    display:inline-block;width:21px;height:18px;margin-right:7px;vertical-align:middle;background:url(../images/common/icon_folder_small.png) 0 0 no-repeat;
+                }
+            }
+            tr:last-child td{border-bottom:none}
+        }
+    }
+    .btnsWrap{
+        display:flex;justify-content: flex-end;gap:0 7px; padding:13px 0 0 0;
+        a{
+            display:flex;align-items: center; justify-content: center; height:27px;padding:0 24px;color:#fff;font-size:15px;border-radius:4px;
+            &.btnCopy{
+                background:#ff701e;
+            }
+            &.btnMove{
+                background:#7860f4;
+            }
+        }
+    }
+    .closeBtn{
+        position:absolute;z-index:10;top:14px;right:21px;padding:0;width:13px;height:13px;margin-top:0;background:url(../images/common/icon_close.png) 0 0 no-repeat;
     }
 }
