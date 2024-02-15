@@ -4,14 +4,14 @@ const init = {
         $('.btnToggle').bind('click',function(){
             if(!$('#snb').hasClass('on')){
                 $('#snb').animate({
-                    'max-width':'73px'
+                    'width':'73px'
                 },timer);
                 setTimeout(function(){                    
                     $('#snb').addClass('on');
                 },timer / 1.2);
             }else{
                 $('#snb').animate({
-                    'max-width':'233px'
+                    'width':'233px'
                 },timer);
                 setTimeout(function(){                    
                     $('#snb').removeClass('on');

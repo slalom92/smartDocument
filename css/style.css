@@ -198,7 +198,7 @@ a.skipNaviBtn:active {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  max-width: 233px;
+  width: 233px;
   height: 100vh;
   background: #009956;
   box-shadow: 0 0 9px 5px rgba(32, 32, 32, 0.24);
@@ -269,6 +269,9 @@ a.skipNaviBtn:active {
 }
 #snb nav a:nth-child(5):hover {
   background: #8bc7ad url(../images/common/snb_5_on.png) 23px center no-repeat;
+}
+#snb.on {
+  width: 73px;
 }
 #snb.on .logo {
   overflow: hidden;
