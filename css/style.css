@@ -467,9 +467,41 @@ a.skipNaviBtn:active {
   display: flex;
   align-items: center;
   margin-left: auto;
+  margin-bottom: 16px;
   justify-content: flex-end;
   padding-right: 21px;
   gap: 0 28px;
+}
+#contents #gnb .rightMenu select {
+  position: relative;
+  z-index: 1;
+  width: 182px;
+  height: 36px;
+  padding: 0 0 0 36px;
+  margin-right: 55px;
+  font-size: 15px;
+  color: #292929;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.07);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 4px;
+  background-color: #fff;
+  background-image: url(../images/common/bg_select.gif), url(../images/common/bg_arrow.gif);
+  background-position: 20px 10px, 90% center;
+  background-repeat: no-repeat;
+}
+#contents #gnb .rightMenu select::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 20px;
+  display: block;
+  width: 1px;
+  height: 16px;
+  background: #9e9e9e;
 }
 #contents #gnb .rightMenu a {
   overflow: hidden;
