@@ -35,6 +35,7 @@ select,input{vertical-align:middle;font-family: 'Noto Sans KR', sans-serif}
 /* color */
 $white:#fff;
 $green:#009956;
+$green2 : #0a9d5c;
 $gray:#f4f6f7;
 $orange : #ff701e;
 $border_1:#e1e6ea;
@@ -421,5 +422,53 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
     }
     .closeBtn{
         position:absolute;z-index:10;top:14px;right:21px;padding:0;width:13px;height:13px;margin-top:0;background:url(../images/common/icon_close.png) 0 0 no-repeat;
+    }
+}
+
+/* login */
+.loginWrap{
+    display:flex;align-items:center;justify-content:center;width:100%;height:100vh;
+    .loginBox{
+        display:flex;justify-content: space-between;width:950px;height:609px;padding:21px 20px 0 90px;background:$green2 url(../images/common/logo_login.png) 50px bottom no-repeat;border-radius:15px;
+        .textSection{display:flex;height:587px;flex-direction:column;align-content:space-between;width:264px;padding:104px 0 0 0;
+            h2{color:$white;font-size:39px;font-weight:bold;text-shadow:0 0 4px 6px rgba(0,0,0,0.42);}
+            .infoArea{
+                width:264px;padding:16px 0 55px 0;margin-top:auto;border-top:1px solid #8cd1b3;
+                h3{
+                    line-height:30px;font-size:22px;color:$white;font-weight:bold;text-shadow:0 0 4px 6px rgba(0,0,0,0.42);
+                }
+                p{
+                    padding:8px 0 0 0;line-height:16px;font-size:12px;color:$white;font-weight:bold;text-shadow:0 0 2px 5px rgba(0,0,0,0.42);
+                }
+            }
+        }
+        .loginSection{
+            width:503px;height:564px;padding:107px 0 0 126px;background:$white;border-radius:15px;box-shadow:0 0 20px 4px rgba(24,24,24,0.51);
+            h1{
+                font-size:26px;font-weight:700;color:#3d3d3d;
+                span{
+                    display:block;padding:10px 0 0 0;font-size:26px;font-weight:700;color:#e1e4e3;
+                }
+            }
+            fieldset{
+                width:252px;padding:4px 0 0 0;
+                input{
+                    width:100%;height:46px;margin:14px 0 0 0;padding:0 0 0 50px;border:none;border-bottom:1px solid $green;
+                    &[type=text]{
+                        background:url(../images/common/icon_login_id.png) 20px 14px no-repeat;
+                    }
+                    &[type=password]{
+                        background:url(../images/common/icon_login_pw.png) 20px 14px no-repeat;
+                    }
+                }
+                .btnLogin{display:flex;justify-content:center;align-items:center;width:100%;height:45px;margin:29px 0 0 0;font-size:14px;color:$white;background:$green;border-radius:4px;}
+            }
+            .btnsWrap{
+                display:flex;justify-content: space-between;width:252px;
+                a{
+                    display:flex;justify-content: center;align-items: center;width:121px;height:28px;margin:45px 0 0 0;font-size:12px;color:#222;border:2px solid $green;border-radius:3px;
+                }
+            }
+        }
     }
 }
