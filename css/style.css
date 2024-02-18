@@ -745,7 +745,7 @@ a.skipNaviBtn:active {
   position: absolute;
   z-index: 1;
   right: 0;
-  top: 0;
+  top: 20px;
   width: 296px;
   height: 47px;
   padding: 0 0 0 36px;
