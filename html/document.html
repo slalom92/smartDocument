@@ -60,7 +60,20 @@
                 <a href="#" class="homeIcon">home</a>
                 <a href="#">공통</a>
                 <a href="#">문서</a>
-                <a href="#" class="functionBtn">기능</a>
+                <div class="posRel">
+                    <a href="#" class="functionBtn" onclick="init.openLayer('addLayer');return false;">기능</a>                
+                    <!-- //더하기 팝업 -->
+                    <section class="addLayer" id="addLayer">
+                        <a href="#" class="btn_1">파일 업로드</a>
+                        <a href="#" class="btn_2">새 폴더</a>
+                        <a href="#" class="btn_3">새 텍스트 파일</a>
+                        <a href="#" class="btn_4">New Document</a>
+                        <a href="#" class="btn_5">New Spreadsheet</a>
+                        <a href="#" class="btn_6">New Presentation</a>
+                        <a href="#" class="btn_7">New Form Template</a>
+                    </section>
+                    <!-- 더하기 팝업// -->
+                </div>
             </div>
             <a href="#" class="btnType">보기방식</a>
         </section>

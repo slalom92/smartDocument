@@ -49,6 +49,22 @@ const init = {
             return false;
         });
     },
+    closeAddLayer : function(e){
+        $(document).bind('click',function(e){
+            let clickedobj = $(e.target);
+            if(!clickedobj.parents().hasClass('addLayer')){
+                if(clickedobj.hasClass('functionBtn')){
+                    return false;
+                }
+                $('.addLayer').hide();
+            }
+            return false;
+        });
+        $('.addLayer a').bind('click',function(){
+            $('.addLayer').hide();
+            return false;
+        });
+    },
     changeName : function(){
         $('.changeName').bind('click',function(){
             let clickedValue = $('.rightClickable').eq(init.contextClickdIdx).find('.folderName').text();
@@ -72,5 +88,6 @@ $(document).ready(function(){
     init.lnbFn();
     init.rightClickable();
     init.closeContextmenu();
+    init.closeAddLayer();
     init.changeName();
 });

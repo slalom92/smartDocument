@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Smart DocumentAI</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5shiv.js"></script>
+<script type="text/javascript" src="../js/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<!-- //아이디 중복체크 -->
+<section class="checkIdLayer" id="checkIdLayer">
+    <h3>아이디 중복체크</h3>
+    <div class="idInputArea">
+        <input type="text" title="아이디 입력"/>
+        <a href="#">중복체크</a>
+    </div>
+    <p>해당 아이디는 <strong>중복된 아이디</strong>로 사용할 수 없습니다.<br/>중복체크 입력란에 <strong>새로운 아이디를 입력 후,</strong><br/>중복 체크 버튼을 클릭해주세요.</p>
+    <p>해당 아이디는 가입할 수 있는 아이디입니다.<br/>다음 확인 버튼을 누른 후 회원가입을 계속 진행 바랍니다.</p>
+    <a href="#" class="btnConfirm">확인</a>
+    <a href="#" class="closeBtn" onclick="init.closeLayer('checkIdLayer');return false;"><span class="ir">닫기</span></a>
+</section>
+<!-- 아이디 중복체크// -->
+<!-- //event type1 -->
+<section class="eventLayer_1" id="eventLayer_1">
+    <h3>EVENT TITLE</h3>
+    <P>EVENT DESCRIPTION</P>
+    <div class="eventContents">
+        EVENT
+    </div>
+    <div class="btnsWrap">
+        <a href="#">CONFIRM</a>
+        <a href="#">CLOSE</a>
+    </div>
+    <a href="#" class="closeBtn" onclick="init.closeLayer('eventLayer_1');return false;"><span class="ir">닫기</span></a>
+</section>
+<!-- event type1// -->
+<!-- //event type2-->
+<section class="eventLayer_2" id="eventLayer_2">
+    <h3>EVENT TITLE</h3>
+    <P>EVENT DESCRIPTION</P>
+    <div class="eventContents">
+        EVENT
+    </div>
+    <div class="btnsWrap">
+        <a href="#">CONFIRM</a>
+        <a href="#">CLOSE</a>
+    </div>
+    <a href="#" class="closeBtn" onclick="init.closeLayer('eventLayer_2');return false;"><span class="ir">닫기</span></a>
+</section>
+<!-- event type2// -->
+<!-- //notice type1 -->
+<section class="noticLayer_1" id="noticLayer_1">
+    <div class="noticeContents">
+        선택하신 소셜 정보로 회원가입 되어 있지 않습니다.<br/>회원가입 하시겠습니까?
+    </div>
+    <div class="btnsWrap">
+        <a href="#">CONFIRM</a>
+        <a href="#">CLOSE</a>
+    </div>
+    <a href="#" class="closeBtn" onclick="init.closeLayer('noticLayer_1');return false;"><span class="ir">닫기</span></a>
+</section>
+<!-- notice type1 // -->
+<!-- //notice type2 -->
+<section class="noticLayer_2" id="noticLayer_2">
+    <div class="noticeContents">
+        선택하신 소셜 정보로 회원가입 되어 있지 않습니다.<br/>회원가입 하시겠습니까?
+    </div>
+    <div class="btnsWrap">
+        <a href="#">CONFIRM</a>
+        <a href="#">CLOSE</a>
+    </div>
+    <a href="#" class="closeBtn" onclick="init.closeLayer('noticLayer_2');return false;"><span class="ir">닫기</span></a>
+</section>
+<!-- notice type2 // -->
+<!-- //notice type3 -->
+<section class="noticLayer_3" id="noticLayer_3">
+    <h3>알림</h3>
+    <div class="noticeContents">
+        선택하신 소셜 정보로 회원가입 되어 있지 않습니다.<br/>회원가입 하시겠습니까?
+    </div>
+    <div class="btnsWrap">
+        <a href="#">CONFIRM</a>
+        <a href="#">CLOSE</a>
+    </div>
+    <a href="#" class="closeBtn" onclick="init.closeLayer('noticLayer_3');return false;"><span class="ir">닫기</span></a>
+</section>
+<!-- notice type3 // -->
+<!-- //notice type4 -->
+<section class="noticLayer_4" id="noticLayer_4" style="display:block">
+    <h3>알림</h3>
+    <div class="noticeContents">
+        선택하신 소셜 정보로 회원가입 되어 있지 않습니다.<br/>회원가입 하시겠습니까?
+    </div>
+    <div class="btnsWrap">
+        <a href="#">CONFIRM</a>
+        <a href="#">CLOSE</a>
+    </div>
+    <a href="#" class="closeBtn" onclick="init.closeLayer('noticLayer_4');return false;"><span class="ir">닫기</span></a>
+</section>
+<!-- notice type4 // -->
+</body>
+</html>
