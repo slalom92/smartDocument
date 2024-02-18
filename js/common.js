@@ -82,6 +82,17 @@ const init = {
     closeLayer : function(id){
         $('#'+id).hide();
     },
+    tabView : function(e){
+        $('.tabArea a').bind('click',function(e){
+            let clickedIdx = $(this).index();
+            if(clickedIdx!=2){
+                $('.tabArea a').removeClass('on').eq(clickedIdx).addClass('on');
+                $('.viewArea').hide();
+                $('.viewArea_'+ (clickedIdx+1)).show();
+                return false;
+            }
+        });
+    }
 }
 
 $(document).ready(function(){
@@ -90,4 +101,5 @@ $(document).ready(function(){
     init.closeContextmenu();
     init.closeAddLayer();
     init.changeName();
+    init.tabView();
 });

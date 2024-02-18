@@ -1669,4 +1669,207 @@ a.skipNaviBtn:active {
   height: 13px;
   margin-top: 0;
   background: url(../images/common/btn_close_white.png) 0 0 no-repeat;
+}
+
+/* 개인정보 레이어 */
+.termsLayer {
+  display: none;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  z-index: 9;
+  width: 874px;
+  padding: 50px 53px 37px;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
+  border-radius: 6px;
+}
+.termsLayer h3 {
+  padding: 0 0 0 20px;
+  font-size: 19px;
+  color: #222;
+}
+.termsLayer .termsTextArea {
+  margin: 30px auto 0;
+  width: 768px;
+  height: 502px;
+  padding: 15px;
+  font-size: 14px;
+  line-height: 1.2;
+  border: 1px solid #e1e6ea;
+  background: #fafafa;
+}
+.termsLayer .confirmBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 134px;
+  height: 36px;
+  margin: 24px auto 0;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+  background: #009956;
+}
+.termsLayer .closeBtn {
+  position: absolute;
+  z-index: 10;
+  top: 14px;
+  right: 21px;
+  padding: 0;
+  width: 13px;
+  height: 13px;
+  margin-top: 0;
+  background: url(../images/common/icon_close.png) 0 0 no-repeat;
+}
+
+/* 메시지 보관함 */
+.msgLayer {
+  display: none;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  z-index: 9;
+  width: 552px;
+  padding: 40px 0 0 0;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
+  border-radius: 6px;
+}
+.msgLayer h3 {
+  padding: 0 0 0 29px;
+  font-size: 19px;
+  color: #222;
+}
+.msgLayer .tabArea {
+  display: flex;
+  margin: 36px 0 0 0;
+  padding: 0 0 0 26px;
+  gap: 0 8px;
+  border-bottom: 1px solid #39af7c;
+}
+.msgLayer .tabArea a {
+  position: relative;
+  z-index: 1;
+  opacity: 0.5;
+  display: flex;
+  width: 120px;
+  height: 43px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 10px 10px 0 0;
+}
+.msgLayer .tabArea a:hover, .msgLayer .tabArea a.on {
+  opacity: 1;
+  box-shadow: 2px 2px 6px 2px rgba(119, 119, 119, 0.39);
+}
+.msgLayer .tabArea a:nth-child(1) {
+  background: #1fa56b;
+}
+.msgLayer .tabArea a:nth-child(2) {
+  background: #ff701e;
+}
+.msgLayer .tabArea a:nth-child(3) {
+  background: #7860f4;
+}
+.msgLayer .tabArea a mark {
+  overflow: hidden;
+  position: absolute;
+  z-index: 2;
+  top: -4.5px;
+  left: 13px;
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  font-size: 0;
+  text-indent: -99px;
+  background: #f00;
+  border-radius: 4.5px;
+}
+.msgLayer .viewArea {
+  display: none;
+  overflow-y: auto;
+  max-height: 546px;
+  padding: 16px 27px 55px;
+}
+.msgLayer .viewArea_1 {
+  display: block;
+}
+.msgLayer .viewArea ul {
+  display: flex;
+  gap: 7px 0;
+  flex-direction: column;
+  width: 498px;
+}
+.msgLayer .viewArea ul li {
+  width: 100%;
+  padding: 4px 10px 11px 10px;
+  border: 1px solid #e1e6ea;
+  background: #f5f8fa;
+}
+.msgLayer .viewArea ul li .topInfo {
+  display: flex;
+  height: 31px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e1e6ea;
+}
+.msgLayer .viewArea ul li .topInfo .userInfo {
+  padding: 0 0 0 13px;
+  font-size: 13px;
+  color: #222;
+}
+.msgLayer .viewArea ul li .topInfo .userInfo span {
+  margin-right: 11px;
+}
+.msgLayer .viewArea ul li .topInfo .dateInfo {
+  padding: 0 8px 0 0;
+  font-size: 13px;
+  color: #222;
+}
+.msgLayer .viewArea ul li .textInfo {
+  min-height: 44px;
+  padding: 13px;
+  line-height: 1.2;
+  font-size: 15px;
+  color: #222;
+}
+.msgLayer .viewArea ul li .relyInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.msgLayer .viewArea ul li .relyInfo .replyText {
+  padding: 0 0 0 35px;
+  font-size: 13px;
+  color: #5a5a5a;
+}
+.msgLayer .viewArea ul li .relyInfo a {
+  margin-right: 12px;
+}
+.msgLayer .moreIcon {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  bottom: 21px;
+  left: 50%;
+  width: 34px;
+  height: 8px;
+  margin: 0 0 0 -17px;
+  background: url(../images/common/icon_more.png) 0 0 no-repeat;
+}
+.msgLayer .closeBtn {
+  position: absolute;
+  z-index: 10;
+  top: 14px;
+  right: 21px;
+  padding: 0;
+  width: 13px;
+  height: 13px;
+  margin-top: 0;
+  background: url(../images/common/icon_close.png) 0 0 no-repeat;
 }/*# sourceMappingURL=style.css.map */
