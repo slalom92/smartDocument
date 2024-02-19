@@ -1118,52 +1118,65 @@ a.skipNaviBtn:active {
   border-radius: 5px;
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.09);
 }
-.addLayer > a {
+.addLayer > div {
   position: relative;
   z-index: 1;
   display: flex;
   align-items: center;
   height: 36px;
   padding: 0 0 0 38px;
+  cursor: pointer;
   font-size: 15px;
   color: #222;
 }
-.addLayer > a.btn_1 {
+.addLayer > div.btn_1 {
   background: url(../images/common/btn_add_1.png) 7px 8px no-repeat;
 }
-.addLayer > a.btn_2 {
+.addLayer > div.btn_2 {
   background: url(../images/common/btn_add_2.png) 7px 8px no-repeat;
 }
-.addLayer > a.btn_3 {
+.addLayer > div.btn_3 {
   background: url(../images/common/btn_add_3.png) 7px 8px no-repeat;
 }
-.addLayer > a.btn_4 {
+.addLayer > div.btn_4 {
   background: url(../images/common/btn_add_4.png) 7px 8px no-repeat;
 }
-.addLayer > a.btn_5 {
+.addLayer > div.btn_5 {
   background: url(../images/common/btn_add_5.png) 7px 8px no-repeat;
 }
-.addLayer > a.btn_6 {
+.addLayer > div.btn_6 {
   background: url(../images/common/btn_add_6.png) 7px 8px no-repeat;
 }
-.addLayer > a.btn_7 {
+.addLayer > div.btn_7 {
   background: url(../images/common/btn_add_7.png) 7px 8px no-repeat;
 }
-.addLayer > a + a {
+.addLayer > div + div {
   margin-top: 8px;
 }
-.addLayer > a:hover::after {
-  content: "";
-  display: block;
-  position: absolute;
+.addLayer > div input[type=text] {
+  position: relative;
   z-index: 1;
-  top: 0;
-  left: 0;
+  left: -40px;
+  width: 157px;
+  height: 25px;
+  padding: 0 0 0 49px;
+  border: none;
+  background: #f4f6f7;
   width: 233px;
   height: 36px;
+  cursor: auto;
   background: url(../images/common/add_over.png) 0 0 no-repeat;
   box-shadow: 0 0 4px 3px rgba(94, 94, 94, 0.11);
   border-radius: 6px;
+}
+.addLayer > div input[type=text] + .submitThis {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 4px;
+  right: 10px;
+  width: 24px;
+  height: 25px;
 }
 
 /* login */

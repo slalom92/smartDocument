@@ -60,9 +60,18 @@ const init = {
             }
             return false;
         });
-        $('.addLayer a').bind('click',function(){
-            $('.addLayer').hide();
+        $('.addLayer div').bind('click',function(){
+            let clickedVal = $(this).text();
+            $('.addLayer div').removeClass('on');
+            $(this).addClass('on');
+            $(this).html('<input type="text" value="'+ clickedVal +'" /><a href="#" class="submitThis"></a>');
+            $(this).find('input').focus();
             return false;
+        });
+        $(document).on('blur','.addLayer input[type=text]',function(){
+            let thisVal = $(this).val();
+            console.log(thisVal);
+            $(this).parent().html(thisVal);
         });
     },
     changeName : function(){
