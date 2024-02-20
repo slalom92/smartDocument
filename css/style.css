@@ -191,6 +191,10 @@ a.skipNaviBtn:active {
   margin-top: 30px;
 }
 
+.mt46 {
+  margin-top: 46px;
+}
+
 /* layout */
 .wrap {
   display: flex;
@@ -1160,6 +1164,7 @@ a.skipNaviBtn:active {
   width: 157px;
   height: 25px;
   padding: 0 0 0 49px;
+  font-size: 15px;
   border: none;
   background: #f4f6f7;
   width: 233px;
@@ -1208,7 +1213,7 @@ a.skipNaviBtn:active {
   color: #fff;
   font-size: 39px;
   font-weight: bold;
-  text-shadow: 0 0 4px 6px rgba(0, 0, 0, 0.42);
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.42);
 }
 .loginWrap .loginBox .textSection .infoArea {
   width: 264px;
@@ -1221,7 +1226,7 @@ a.skipNaviBtn:active {
   font-size: 22px;
   color: #fff;
   font-weight: bold;
-  text-shadow: 0 0 4px 6px rgba(0, 0, 0, 0.42);
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.42);
 }
 .loginWrap .loginBox .textSection .infoArea p {
   padding: 8px 0 0 0;
@@ -1229,7 +1234,7 @@ a.skipNaviBtn:active {
   font-size: 12px;
   color: #fff;
   font-weight: bold;
-  text-shadow: 0 0 2px 5px rgba(0, 0, 0, 0.42);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.42);
 }
 .loginWrap .loginBox .loginSection {
   width: 503px;
@@ -1296,6 +1301,149 @@ a.skipNaviBtn:active {
   font-size: 12px;
   color: #222;
   border: 2px solid #009956;
+  border-radius: 3px;
+}
+
+/* 회원가입 */
+.registWrap {
+  display: flex;
+}
+.registWrap .registLnb {
+  display: flex;
+  flex-direction: column;
+  width: 306px;
+  min-height: 100vh;
+  background: #0a9d5c url(../images/common/logo_login.png) 23px bottom no-repeat;
+}
+.registWrap .registLnb .textSection {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  width: 306px;
+  padding: 130px 0 0 50px;
+}
+.registWrap .registLnb .textSection h2 {
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.42);
+}
+.registWrap .registLnb .textSection .infoArea {
+  width: 306px;
+}
+.registWrap .registLnb .textSection .infoArea p {
+  padding: 20px 0 0 0;
+  font-size: 19px;
+  color: #137347;
+  font-weight: bold;
+}
+.registWrap .registLnb .footArea {
+  width: 206px;
+  padding: 16px 0 73px 0;
+  margin-top: auto;
+  margin-left: 50px;
+  border-top: 1px solid #8cd1b3;
+}
+.registWrap .registLnb .footArea h3 {
+  line-height: 30px;
+  font-size: 19px;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.42);
+}
+.registWrap .registLnb .footArea p {
+  padding: 8px 0 0 0;
+  line-height: 16px;
+  font-size: 11px;
+  color: #fff;
+  font-weight: normal;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.42);
+}
+.registWrap .registContents {
+  padding: 76px 0 0 55px;
+}
+.registWrap .registContents h3 {
+  margin: 24px 0 10px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #222;
+}
+.registWrap .registContents .infoWrite {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 0 0;
+  gap: 0 12px;
+  font-size: 15px;
+  color: #222;
+}
+.registWrap .registContents .infoWrite input[type=text], .registWrap .registContents .infoWrite input[type=password] {
+  width: 287px;
+  height: 41px;
+  padding: 0 15px;
+  font-size: 15px;
+  border: 1px solid #009956;
+  border-radius: 3px;
+}
+.registWrap .registContents .infoWrite select {
+  width: 131px;
+  height: 41px;
+  font-size: 15px;
+  border: 1px solid #009956;
+  border-radius: 3px;
+}
+.registWrap .registContents .greenBtn {
+  display: flex;
+  width: 116px;
+  height: 41px;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  color: #fff;
+  background: #009956;
+  border-radius: 3px;
+}
+.registWrap .registContents .rowWrap {
+  display: flex;
+  gap: 0 12px;
+}
+.registWrap .registContents .rowWrap .flexOne {
+  display: flex;
+  flex-direction: column;
+}
+.registWrap .registContents .rowWrap .flexOne input[type=text], .registWrap .registContents .rowWrap .flexOne input[type=password] {
+  width: 287px;
+  height: 41px;
+  padding: 0 15px;
+  font-size: 15px;
+  border: 1px solid #009956;
+  border-radius: 3px;
+}
+.registWrap .registContents .rowWrap2 {
+  display: flex;
+  gap: 0 30px;
+}
+.registWrap .registContents .rowWrap2 .flexOne input[type=text], .registWrap .registContents .rowWrap2 .flexOne input[type=password] {
+  width: 287px;
+  height: 41px;
+  padding: 0 15px;
+  font-size: 15px;
+  border: 1px solid #009956;
+  border-radius: 3px;
+}
+.registWrap .registContents .btnsWrap {
+  display: flex;
+  margin: 53px 0 0 0;
+  gap: 0 8px;
+}
+.registWrap .registContents .btnsWrap a {
+  display: flex;
+  width: 139px;
+  height: 41px;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  color: #fff;
+  background: #009956;
   border-radius: 3px;
 }
 

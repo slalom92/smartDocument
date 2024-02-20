@@ -60,6 +60,7 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
 
 /* margin */
 .mt30{margin-top:30px;}
+.mt46{margin-top:46px;}
 
 /* layout */
 .wrap{display:flex;width:100%;}
@@ -484,7 +485,7 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
         //     content:'';display:block;position:absolute;z-index:1;top:0;left:0;width:233px;height:36px;cursor:auto;background:url(../images/common/add_over.png) 0 0 no-repeat;box-shadow:0 0 4px 3px rgba(94,94,94,0.11);border-radius:6px;
         // }
         input[type=text]{
-            position:relative;z-index:1;left:-40px;width:157px;height:25px;padding:0 0 0 49px;border:none;background:#f4f6f7;width:233px;height:36px;cursor:auto;background:url(../images/common/add_over.png) 0 0 no-repeat;box-shadow:0 0 4px 3px rgba(94,94,94,0.11);border-radius:6px;
+            position:relative;z-index:1;left:-40px;width:157px;height:25px;padding:0 0 0 49px;font-size:15px;border:none;background:#f4f6f7;width:233px;height:36px;cursor:auto;background:url(../images/common/add_over.png) 0 0 no-repeat;box-shadow:0 0 4px 3px rgba(94,94,94,0.11);border-radius:6px;
             +.submitThis{
                 display:block;position:absolute;z-index:2;top:4px;right:10px;width:24px;height:25px;
             }
@@ -498,14 +499,14 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
     .loginBox{
         display:flex;justify-content: space-between;width:950px;height:609px;padding:21px 20px 0 90px;background:$green2 url(../images/common/logo_login.png) 50px bottom no-repeat;border-radius:15px;
         .textSection{display:flex;height:587px;flex-direction:column;align-content:space-between;width:264px;padding:104px 0 0 0;
-            h2{color:$white;font-size:39px;font-weight:bold;text-shadow:0 0 4px 6px rgba(0,0,0,0.42);}
+            h2{color:$white;font-size:39px;font-weight:bold;text-shadow:0 4px 6px rgba(0,0,0,0.42);}
             .infoArea{
                 width:264px;padding:16px 0 55px 0;margin-top:auto;border-top:1px solid #8cd1b3;
                 h3{
-                    line-height:30px;font-size:22px;color:$white;font-weight:bold;text-shadow:0 0 4px 6px rgba(0,0,0,0.42);
+                    line-height:30px;font-size:22px;color:$white;font-weight:bold;text-shadow:0 4px 6px rgba(0,0,0,0.42);
                 }
                 p{
-                    padding:8px 0 0 0;line-height:16px;font-size:12px;color:$white;font-weight:bold;text-shadow:0 0 2px 5px rgba(0,0,0,0.42);
+                    padding:8px 0 0 0;line-height:16px;font-size:12px;color:$white;font-weight:bold;text-shadow:0 2px 5px rgba(0,0,0,0.42);
                 }
             }
         }
@@ -539,6 +540,64 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
         }
     }
 }
+
+/* 회원가입 */
+.registWrap{
+    display:flex;
+    .registLnb{
+        display:flex;flex-direction:column;width:306px;min-height:100vh;background:$green2 url(../images/common/logo_login.png) 23px bottom no-repeat;
+        .textSection{display:flex;flex-direction:column;align-content:space-between;width:306px;padding:130px 0 0 50px;
+            h2{color:$white;font-size:35px;font-weight:bold;text-shadow:0 4px 6px rgba(0,0,0,0.42);}
+            .infoArea{
+                width:306px;
+                p{
+                    padding:20px 0 0 0;font-size:19px;color:#137347;font-weight:bold;
+                }
+            }
+        }
+        .footArea{
+            width:206px;padding:16px 0 73px 0;margin-top:auto;margin-left:50px;border-top:1px solid #8cd1b3;
+            h3{
+                line-height:30px;font-size:19px;color:$white;font-weight:bold;text-shadow:0 4px 6px rgba(0,0,0,0.42);
+            }
+            p{
+                padding:8px 0 0 0;line-height:16px;font-size:11px;color:$white;font-weight:normal;text-shadow:0 2px 5px rgba(0,0,0,0.42);
+            }
+        }
+    }
+    .registContents{
+        padding:76px 0 0 55px;
+        h3{margin:24px 0 10px 0;font-size:15px;font-weight:500;color:#222;}
+        .infoWrite{
+            display:flex;align-items: center;margin:10px 0 0 0;gap:0 12px;font-size:15px;color:#222;
+            input[type=text],input[type=password]{width:287px;height:41px;padding:0 15px;font-size:15px;border:1px solid $green;border-radius:3px;}
+            select{width:131px;height:41px;font-size:15px;border:1px solid $green;border-radius:3px;}
+        }
+        .greenBtn{
+            display:flex;width:116px;height:41px;justify-content: center;align-items: center;font-size:15px;color:$white;background:$green;border-radius:3px;
+        }
+        .rowWrap{
+            display:flex;gap:0 12px;
+            .flexOne{
+                display:flex;flex-direction:column;
+                input[type=text],input[type=password]{width:287px;height:41px;padding:0 15px;font-size:15px;border:1px solid $green;border-radius:3px;}
+            }
+        }
+        .rowWrap2{
+            display:flex;gap:0 30px;
+            .flexOne{
+                input[type=text],input[type=password]{width:287px;height:41px;padding:0 15px;font-size:15px;border:1px solid $green;border-radius:3px;}                
+            }
+        }
+        .btnsWrap{
+            display:flex;margin:53px 0 0 0;gap:0 8px;
+            a{
+                display:flex;width:139px;height:41px;justify-content: center;align-items: center;font-size:15px;color:$white;background:$green;border-radius:3px;
+            }
+        }
+    }
+}
+
 /* 아이디 중복 체크 레이어*/
 .checkIdLayer{
     display:none;position:fixed;top:50vh;left:50vw;z-index:9;width:507px;padding:52px 65px;transform: translate(-50%,-50%); background:$white;box-shadow: 0 0 10px rgba(0,0,0,0.09);border-radius:6px;
