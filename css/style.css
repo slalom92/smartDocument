@@ -423,6 +423,7 @@ a.skipNaviBtn:active {
   /* icons */
   /* table */
   /* paging */
+  /* AI Search */
 }
 #contents #gnb {
   display: flex;
@@ -777,6 +778,37 @@ a.skipNaviBtn:active {
   width: 1px;
   height: 16px;
   background: #9e9e9e;
+}
+#contents .aiSearchWrap {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+#contents .aiSearchWrap .chatListArea {
+  width: 259px;
+  height: calc(100% + 60px);
+  margin: -30px 0;
+  border-right: 1px solid #e1e6ea;
+  box-shadow: 11px 0px 15px 1px rgba(94, 94, 94, 0.05);
+}
+#contents .aiSearchWrap .chatMsgArea {
+  position: relative;
+  z-index: 1;
+  width: calc(100% - 259px);
+  padding: 0 80px 85px 104px;
+}
+#contents .aiSearchWrap .chatMsgArea .inputChat {
+  position: absolute;
+  z-index: 1;
+  bottom: 33px;
+  left: 11%;
+  display: flex;
+  width: 78%;
+  height: 52px;
+  background: #fafafa;
+  border: 1px solid #e1e6ea;
+  border-radius: 20px;
 }
 
 /* right click */

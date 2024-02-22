@@ -46,6 +46,22 @@ $text_1:#baecd6;
 $text_2:#0e5435;
 $text_3:#a4a4a4;
 
+@mixin ellipsis( $count ) {
+    @if $count == 1 {
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    } @else {
+      word-break: keep-all;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: $count;
+      -webkit-box-orient: vertical;
+    }
+  }
+
 /* skip navigation */
 a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #ea0e15;color:var(--white_1);display:block;left:-200%;text-align:center;width:200px;padding:5px 0;border:1px solid var(--black_0);border-top:none;
     &:focus{left:50%;margin-left:-100px;z-index:10000;}
@@ -307,6 +323,17 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
             appearance: none;-webkit-appearance: none;-moz-appearance: none;border-radius:4px;background-color:$white;background-image:url(../images/common/bg_select.gif),url(../images/common/bg_arrow.gif);background-position: 20px 17px,90% center;background-repeat: no-repeat;
             &::before{
                 content:'';position:absolute;z-index:1;top:10px;left:20px;display:block;width:1px;height:16px;background:#9e9e9e;
+            }
+        }
+    }
+    /* AI Search */
+    .aiSearchWrap{
+        display:flex;position:relative;z-index:1;height:100%;
+        .chatListArea{width:259px;height:calc(100% + 60px);margin:-30px 0;border-right:1px solid $border_1;box-shadow:11px 0px 15px 1px rgba(94, 94, 94, 0.05);}
+        .chatMsgArea{
+            position:relative;z-index:1;width:calc(100% - 259px);padding:0 80px 85px 104px;
+            .inputChat{
+                position:absolute;z-index:1;bottom:33px;left:11%;display:flex;width:78%;height:52px;background:#fafafa;border:1px solid $border_1;border-radius:20px;
             }
         }
     }
