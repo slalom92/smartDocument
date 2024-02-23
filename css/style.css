@@ -1076,6 +1076,7 @@ a.skipNaviBtn:active {
 #contents .aiSearchWrap .chatMsgArea .chatTextWrap .theOtherMsg .msg {
   font-size: 16px;
   line-height: 1.2;
+  word-break: break-word;
 }
 #contents .aiSearchWrap .chatMsgArea .chatTextWrap .theOtherMsg .utilBtns {
   position: absolute;
@@ -1116,6 +1117,7 @@ a.skipNaviBtn:active {
   margin-left: auto;
   color: #252525;
   font-size: 16px;
+  word-break: break-word;
   background: #ecf1f5;
   border-radius: 25px 25px 0 25px;
 }

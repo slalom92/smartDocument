@@ -462,7 +462,7 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
                     &::after{content:'';display:block;position:absolute;z-index:1;bottom:0;left:-16px;width: 0;height: 0;border-bottom: 17px solid #7860f4;border-right: 0 solid #7860f4;
                         border-left: 17px solid white;}
                     .msg{
-                        font-size:16px;line-height:1.2;
+                        font-size:16px;line-height:1.2;word-break: break-word;
                     }
                     .utilBtns{
                         position:absolute;z-index:1;bottom:-43px;left:40px;display:flex;gap:0 15px;
@@ -477,7 +477,7 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
                     }
                 }
                 .myMsg{
-                    position:relative;z-index:1;width:fit-content;max-width:90%;padding:25px 64px 25px 45px;margin-left:auto;color:#252525;font-size:16px;background:#ecf1f5;border-radius:25px 25px 0 25px;
+                    position:relative;z-index:1;width:fit-content;max-width:90%;padding:25px 64px 25px 45px;margin-left:auto;color:#252525;font-size:16px;word-break: break-word;background:#ecf1f5;border-radius:25px 25px 0 25px;
                     &::after{content:'';display:block;position:absolute;z-index:1;bottom:0;right:-16px;width: 0;height: 0;border-bottom: 17px solid #ecf1f5;border-left: 0 solid #ecf1f5;
                         border-right: 17px solid white;}
                     .icon_pencil{display:block;position:absolute;top:22px;right:34px;width:24px;height:24px;background:url(../images/common/icon_pencil.png) 0 0 no-repeat}
