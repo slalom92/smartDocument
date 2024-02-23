@@ -190,15 +190,23 @@ a.skipNaviBtn:active {
 }
 
 /*padding*/
+.pt0 {
+  padding-top: 0 !important;
+}
+
 .pt20 {
-  padding-top: 20px;
+  padding-top: 20px !important;
 }
 
 .pl20 {
-  padding-left: 20px;
+  padding-left: 20px !important;
 }
 
 /* margin */
+.mt0 {
+  margin-top: 0 !important;
+}
+
 .mt18 {
   margin-top: 18px !important;
 }
@@ -224,6 +232,7 @@ a.skipNaviBtn:active {
   flex-wrap: wrap;
   flex-direction: row;
   width: 233px;
+  min-width: 233px;
   height: 100vh;
   background: #009956;
   box-shadow: 0 0 9px 5px rgba(32, 32, 32, 0.24);
@@ -297,6 +306,7 @@ a.skipNaviBtn:active {
 }
 #snb.on {
   width: 73px;
+  min-width: 73px;
 }
 #snb.on .logo {
   overflow: hidden;
@@ -628,6 +638,72 @@ a.skipNaviBtn:active {
 }
 #contents .utilArea .btnType:hover {
   background: url(../images/common/icon_type_on.png) 0 0 no-repeat;
+}
+#contents .utilArea .tagSelect {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  width: 60%;
+  height: 40px;
+  min-width: 740px;
+  padding: 0 34px;
+  margin-left: 18px;
+  color: #929292;
+  background: #fff;
+  border: 1px solid #e1e6ea;
+  border-radius: 3px;
+}
+#contents .utilArea .tagSelect .choosenUl {
+  display: flex;
+  gap: 0 8px;
+  align-items: center;
+  height: 38px;
+}
+#contents .utilArea .tagSelect .choosenUl li {
+  display: flex;
+  align-items: center;
+  height: 23px;
+  padding: 0 16px;
+  font-size: 14px;
+  color: #222;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px rgba(79, 79, 79, 0.31);
+}
+#contents .utilArea .tagSelect .infoTxt {
+  padding-left: 46px;
+  font-size: 15px;
+  color: #929292;
+}
+#contents .utilArea .tagSelect .choiceUl {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 38px;
+  left: -1px;
+  width: calc(100% + 2px);
+  max-height: 500px;
+  padding: 20px 0;
+  background: #fff;
+  border: 1px solid #e1e6ea;
+  border-radius: 3px;
+}
+#contents .utilArea .tagSelect .choiceUl li {
+  height: 40px;
+}
+#contents .utilArea .tagSelect .choiceUl li a {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding-left: 34px;
+  font-size: 15px;
+  color: #929292;
+}
+#contents .utilArea .tagSelect .choiceUl li a:hover {
+  text-decoration: underline;
+}
+#contents .utilArea .tagSelect .choiceUl li a.on {
+  background: #eee;
 }
 #contents .realContents {
   width: calc(100% - 34px);
