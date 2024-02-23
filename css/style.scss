@@ -272,7 +272,7 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
             }
         }
         .tagSelect{
-            position:relative;z-index:1;display:flex;align-items: center;width:60%;height:40px;min-width:740px;padding:0 34px;margin-left:18px;color:#929292;background:$white;border:1px solid $border_1;border-radius:3px;
+            position:relative;z-index:1;display:flex;align-items: center;width:60%;height:40px;min-width:720px;padding:0 34px;margin-left:18px;color:#929292;background:$white;border:1px solid $border_1;border-radius:3px;
             .choosenUl{
                 display:flex;gap:0 8px;align-items:center;height:38px;
                 li{
