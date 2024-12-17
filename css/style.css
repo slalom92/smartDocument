@@ -1227,18 +1227,21 @@ a.skipNaviBtn:active {
   background: url(../images/common/context_2.png) 0 0 no-repeat;
 }
 .contextBox a:nth-child(3) {
-  background: url(../images/common/context_3.png) 0 0 no-repeat;
+  background: url(../images/common/context_8.png) 0 0 no-repeat;
 }
 .contextBox a:nth-child(4) {
-  background: url(../images/common/context_4.png) 0 0 no-repeat;
+  background: url(../images/common/context_3.png) 0 0 no-repeat;
 }
 .contextBox a:nth-child(5) {
-  background: url(../images/common/context_5.png) 0 0 no-repeat;
+  background: url(../images/common/context_4.png) 0 0 no-repeat;
 }
 .contextBox a:nth-child(6) {
-  background: url(../images/common/context_6.png) 0 0 no-repeat;
+  background: url(../images/common/context_5.png) 0 0 no-repeat;
 }
 .contextBox a:nth-child(7) {
+  background: url(../images/common/context_6.png) 0 0 no-repeat;
+}
+.contextBox a:nth-child(8) {
   background: url(../images/common/context_7.png) 0 0 no-repeat;
 }
 .contextBox a + a {
