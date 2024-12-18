@@ -62,77 +62,81 @@
                 </div>
             </div>
         </article>
-        <section class="realContents mt18"> <!-- 검색페이지만 mt18 클래스 추가 -->
-            <div class="searchWrap">
-                <div class="searchInputArea">
-                    <input type="text" placeholder="" title="검색어 입력"/>
-                    <a href="#" class="btnSearch">검색</a>
-                    <a href="#" class="btnType">보기방식</a>
+        <section class="utilArea">
+            <div class="location">
+                <a href="#" class="homeIcon">home</a>
+                <a href="#">공통</a>
+                <a href="#">문서</a>
+                <div class="posRel">
+                    <a href="#" class="functionBtn" onclick="init.openLayer('addLayer');return false;">기능</a>                
+                    <!-- //더하기 팝업 -->
+                    <section class="addLayer" id="addLayer">
+                        <div class="btn_1">파일 업로드</div>
+                        <div class="btn_2">새 폴더</div>
+                        <div class="btn_3">새 텍스트 파일</div>
+                        <div class="btn_4">New Document</div>
+                        <div class="btn_5">New Spreadsheet</div>
+                        <div class="btn_6">New Presentation</div>
+                        <div class="btn_7">New Form Template</div>
+                    </section>
+                    <!-- 더하기 팝업// -->
                 </div>
-                <ul class="resultUl">
-                    <li>
-                        <div class="textWrap">
-                            <h4>AI 기반 자동물류 스마트 팩토리 솔루션</h4>
-                            <div class="author">
-                                장영재, 2019, koasas.kaist.ac.kr
-                            </div>
-                            <div class="resultTxt">
-                                이러한 첨단 제조 및 물류 창고는 과거 컨베이어가 아닌 수 백대에 이르는 물류 … AI의 성공적인 산업 현장적용을 선도할 것으로 예상된다. 또한 다수의 물류 로봇이 동시에 작업을 진행하는 물류이러한 첨단 제조 및 물류 창고는 과거 컨베이어가 아닌 수 백대에 이르는 물류 … AI의 성공적인 산업 현장적용을 선도할 것으로 예상된다. 또한 다수의 물류 로봇이 동시에 작업을 진행하는 물류
-                            </div>
+            </div>
+            <a href="#" class="btnType">보기방식</a>
+        </section>
+        <section class="realContents">
+            <div class="compareContents">
+                <div class="btnsRight">
+                    <a href="#" class="btn_compare">비교</a>
+                </div>
+                <div class="flexOne">
+                    <h3>*문서_1_2023년_17._FEM1-FOU-FM1-ER-0016 (coming project).pdf (기준 파일)</h3>
+                    <div class="selectArea">
+                        <select name="" id="" onchange="$(this).val()=='all'?$(this).next().hide():$(this).next().css('display','flex');">
+                            <option value="all">전체</option>
+                            <option value="">범위</option>
+                        </select>
+                        <div class="detailSelect">
+                            <label for="page1_1">처음</label>
+                            <input type="text" name="" id="page1_1"/>
+                            <label for="page1_2">끝</label>
+                            <input type="text" name="" id="page1_2"/>
                         </div>
-                        <div class="btnsWrap">
-                            <a href="#" class="pdf">PDF</a>
-                            <a href="#" class="pt">원문</a>
+                    </div>
+                    <div class="showArea">
+                        <div class="viewOne">
+                            <img src="https://via.placeholder.com/296x258" alt=""/>
                         </div>
-                    </li>
-                    <li>
-                        <div class="textWrap">
-                            <h4>AI 기반 자동물류 스마트 팩토리 솔루션</h4>
-                            <div class="author">
-                                장영재, 2019, koasas.kaist.ac.kr
-                            </div>
-                            <div class="resultTxt">
-                                이러한 첨단 제조 및 물류 창고는 과거 컨베이어가 아닌 수 백대에 이르는 물류 … AI의 성공적인 산업 현장적용을 선도할 것으로 예상된다. 또한 다수의 물류 로봇이 동시에 작업을 진행하는 물류이러한 첨단 제조 및 물류 창고는 과거 컨베이어가 아닌 수 백대에 이르는 물류 … AI의 성공적인 산업 현장적용을 선도할 것으로 예상된다. 또한 다수의 물류 로봇이 동시에 작업을 진행하는 물류
-                            </div>
+                        <div class="viewOne">
+                            <img src="https://via.placeholder.com/296x258" alt=""/>
                         </div>
-                        <div class="btnsWrap">
-                            <a href="#" class="pdf">PDF</a>
-                            <a href="#" class="word">원문</a>
+                    </div>
+                </div>
+                <div class="flexOne">
+                    <h3>*문서_1_2023년_17._FEM1-FOU-FM1-ER-0016 (coming project).pdf (기준 파일)</h3>
+                    <div class="selectArea">
+                        <select name="" id="" onchange="$(this).val()=='all'?$(this).next().hide():$(this).next().css('display','flex');">
+                            <option value="all">전체</option>
+                            <option value="">범위</option>
+                        </select>
+                        <div class="detailSelect">
+                            <label for="page2_1">처음</label>
+                            <input type="text" name="" id="page2_1"/>
+                            <label for="page2_2">끝</label>
+                            <input type="text" name="" id="page2_2"/>
                         </div>
-                    </li>
-                    <li>
-                        <div class="textWrap">
-                            <h4>AI 기반 자동물류 스마트 팩토리 솔루션</h4>
-                            <div class="author">
-                                장영재, 2019, koasas.kaist.ac.kr
-                            </div>
-                            <div class="resultTxt">
-                                이러한 첨단 제조 및 물류 창고는 과거 컨베이어가 아닌 수 백대에 이르는 물류 … AI의 성공적인 산업 현장적용을 선도할 것으로 예상된다. 또한 다수의 물류 로봇이 동시에 작업을 진행하는 물류이러한 첨단 제조 및 물류 창고는 과거 컨베이어가 아닌 수 백대에 이르는 물류 … AI의 성공적인 산업 현장적용을 선도할 것으로 예상된다. 또한 다수의 물류 로봇이 동시에 작업을 진행하는 물류
-                            </div>
+                    </div>
+                    <div class="showArea">
+                        <div class="viewOne">
+                            <img src="https://via.placeholder.com/296x258" alt=""/>
                         </div>
-                        <div class="btnsWrap">
-                            <a href="#" class="pdf">PDF</a>
-                            <a href="#" class="excel">원문</a>
+                        <div class="viewOne">
+                            <img src="https://via.placeholder.com/296x258" alt=""/>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </section>
-        <!-- //paging -->
-        <div class="pagingWrap">
-            <div class="paging">
-                <a href="#" class="prevPage"></a>
-                <strong>1</strong>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">...</a>
-                <a href="#">9</a>
-                <a href="#">10</a>
-                <a href="#" class="nextPage"></a>
-            </div>
-        </div>
-        <!-- paging// -->
         <!-- //footer -->
         <footer id="footer">Copyright 2024 theMiracleSoft. All Rights Reserved.</footer>
         <!-- footer// -->
@@ -142,7 +146,7 @@
     <section class="contextBox">
         <a href="#" onclick="init.openLayer('shareActiveLayer');return false;">공유하기</a>
         <a href="#">즐겨찾기 추가</a>
-        <a href="#" class="compareFile">파일 비교</a>
+        <a href="#" onclick="init.openLayer('folderCompareLayer');return false;" class="compareFile">파일 비교</a>
         <a href="#" class="changeName">이름 바꾸기</a>
         <a href="#" onclick="init.openLayer('folderMoveLayer');return false;">이동 또는 복사</a>
         <a href="#">다운로드</a>
@@ -236,6 +240,92 @@
         });
     </script>
     <!-- 공유,활동 팝업// -->
+    <!-- //폴더 선택 팝업 -->
+    <section class="folderMoveLayer" id="folderMoveLayer">
+        <h2>폴더 선택</h2>
+        <div class="folderMoveContents">
+            <table class="colTable">
+                <colgroup>
+                    <col style="width:auto"/>
+                    <col style="width:90px"/>
+                    <col style="width:90px"/>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col" class="alignLeft">이름</th>
+                        <th scope="col">크기</th>
+                        <th scope="col">수정한 날짜</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="alignLeft">
+                            <i class="icon_folder"></i> 폴더
+                        </td>
+                        <td>4.6 MB</td>
+                        <td>9일 전</td>
+                    </tr>
+                    <tr>
+                        <td class="alignLeft">
+                            <i class="icon_folder"></i> 폴더
+                        </td>
+                        <td>4.6 MB</td>
+                        <td>9일 전</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="btnsWrap">
+            <a href="#" class="btnCopy">복사</a>
+            <a href="#" class="btnMove">이동</a>
+        </div>
+        <a href="#" class="closeBtn" onclick="init.closeLayer('folderMoveLayer');return false;"><span class="ir">닫기</span></a>
+    </section>
+    <!-- 폴더 선택 팝업// -->
+    <!-- //폴더 비교 선택 팝업 -->
+    <section class="folderCompareLayer" id="folderCompareLayer">
+        <h2>폴더 선택</h2>
+        <div class="folderMoveContents">
+            <table class="colTable">
+                <colgroup>
+                    <col style="width:auto"/>
+                    <col style="width:90px"/>
+                    <col style="width:90px"/>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col" class="alignLeft">이름</th>
+                        <th scope="col">크기</th>
+                        <th scope="col">수정한 날짜</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="alignLeft">
+                            <i class="icon_folder"></i> 폴더
+                        </td>
+                        <td>4.6 MB</td>
+                        <td>9일 전</td>
+                    </tr>
+                    <tr>
+                        <td class="alignLeft" colspan="3">
+                            <ul class="selectFileUl">
+                                <li>
+                                    <input type="checkbox" name="file_select" id="file_select_1"/>
+                                    <label for="file_select_1">문서_2_2022년_HL-BOP-RAM-DESSPC-00002 (previous project).pdf</label>
+                                </li>
+                            </ul>                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="btnsWrap">
+            <a href="#" onclick="init.closeLayer('folderCompareLayer');return false;" class="btnSelect">선택</a>
+        </div>
+        <a href="#" class="closeBtn" onclick="init.closeLayer('folderCompareLayer');return false;"><span class="ir">닫기</span></a>
+    </section>
+    <!-- 폴더 비교 선택 팝업// -->
 </div>
 </body>
 </html>

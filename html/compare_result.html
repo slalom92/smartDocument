@@ -64,148 +64,80 @@
         </article>
         <section class="utilArea">
             <div class="location">
+                <a href="#" class="homeIcon">home</a>
+                <a href="#">공통</a>
+                <a href="#">문서</a>
+                <div class="posRel">
+                    <a href="#" class="functionBtn" onclick="init.openLayer('addLayer');return false;">기능</a>                
+                    <!-- //더하기 팝업 -->
+                    <section class="addLayer" id="addLayer">
+                        <div class="btn_1">파일 업로드</div>
+                        <div class="btn_2">새 폴더</div>
+                        <div class="btn_3">새 텍스트 파일</div>
+                        <div class="btn_4">New Document</div>
+                        <div class="btn_5">New Spreadsheet</div>
+                        <div class="btn_6">New Presentation</div>
+                        <div class="btn_7">New Form Template</div>
+                    </section>
+                    <!-- 더하기 팝업// -->
+                </div>
             </div>
             <a href="#" class="btnType">보기방식</a>
         </section>
-        <section class="realContents pt0">
-            <table class="colTable">
-                <caption>문서 정보 표</caption>
-                <colgroup>
-                    <col style="width:63px"/>
-                    <col style="width:80px"/>
-                    <col style="width:auto"/>
-                    <col style="width:46px"/>
-                    <col style="width:46px"/>
-                    <col style="width:170px"/>
-                    <col style="width:auto"/>
-                </colgroup>
-                <tfoot>
-                    <tr>
-                        <td colspan="2"></td>
-                        <td class="pl20">폴더 1개 그리고 파일 3개</td>
-                        <td colspan="2"></td>
-                        <td class="alignRight">1GB</td>
-                        <td></td>
-                    </tr>
-                </tfoot>
-                <thead>
-                    <tr>
-                        <th scope="col">
-                        </th>
-                        <th>&nbsp;</th>
-                        <th scope="col" class="alignLeft pl20">
-                            <a href="#" class="flexCenter">이름 <i class="icon icon_up"></i></a>
-                        </th>
-                        <th>&nbsp;</th>
-                        <th>&nbsp;</th>
-                        <th scope="col" class="alignRight">
-                            <a href="#" class="flexCenter">크기 <i class="icon icon_down"></i></a>
-                        </th>
-                        <th scope="col" class="alignLeft pl20">
-                            <a href="#" class="flexCenter">수정됨 <i class="icon icon_up"></i></a>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="rightClickable">
-                        <td class="center">
-                            <input type="checkbox" name="" title="선택" class="checkboxType1"/>
-                        </td>
-                        <td class="alignRight">
-                            <a href="#"><img src="../images/common/icon_folder.png" alt="폴더"/></a>
-                        </td>
-                        <td class="pl20">
-                            <div class="folderName">폴더명</div>
-                        </td>
-                        <td class="center">
-                            
-                        </td>
-                        <td class="center">
-                            <a href="#"><img src="../images/common/icon_3dot.png" alt=""/></a>
-                        </td>
-                        <td class="alignRight">4.6 MB</td>
-                        <td class="pl20">5시간 전</td>
-                    </tr>
-                    <tr class="rightClickable">
-                        <td class="center">
-                            <input type="checkbox" name="" title="선택" class="checkboxType1"/>
-                        </td>
-                        <td class="alignRight">
-                            <a href="#"><img src="../images/common/icon_blank.png" alt="폴더"/></a>
-                        </td>
-                        <td class="pl20">
-                            <div class="folderName">업체연락처 및 서버.xlsx</div>
-                        </td>
-                        <td class="center">
-                            
-                        </td>
-                        <td class="center">
-                            <a href="#"><img src="../images/common/icon_3dot.png" alt=""/></a>
-                        </td>
-                        <td class="alignRight">4.6 MB</td>
-                        <td class="pl20">5시간 전</td>
-                    </tr>
-                    <tr class="rightClickable">
-                        <td class="center">
-                            <input type="checkbox" name="" title="선택" class="checkboxType1"/>
-                        </td>
-                        <td class="alignRight">
-                            <a href="#"><img src="../images/common/icon_blank.png" alt="폴더"/></a>
-                        </td>
-                        <td class="pl20">
-                            <div class="folderName">업체연락처 및 서버.xlsx</div>
-                        </td>
-                        <td class="center">
-                            
-                        </td>
-                        <td class="center">
-                            <a href="#"><img src="../images/common/icon_3dot.png" alt=""/></a>
-                        </td>
-                        <td class="alignRight">4.6 MB</td>
-                        <td class="pl20">5시간 전</td>
-                    </tr>
-                    <tr class="rightClickable">
-                        <td class="center">
-                            <input type="checkbox" name="" title="선택" class="checkboxType1"/>
-                        </td>
-                        <td class="alignRight">
-                            <a href="#"><img src="../images/common/icon_blank.png" alt="폴더"/></a>
-                        </td>
-                        <td class="pl20">
-                            <div class="folderName">업체연락처 및 서버.xlsx</div>
-                        </td>
-                        <td class="center">
-                            
-                        </td>
-                        <td class="center">
-                            <a href="#"><img src="../images/common/icon_3dot.png" alt=""/></a>
-                        </td>
-                        <td class="alignRight">4.6 MB</td>
-                        <td class="pl20">5시간 전</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- //paging -->
-            <div class="pagingWrap">
-                <div class="paging">
-                    <a href="#" class="prevPage"></a>
-                    <strong>1</strong>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">...</a>
-                    <a href="#">9</a>
-                    <a href="#">10</a>
-                    <a href="#" class="nextPage"></a>
+        <section class="realContents">
+            <div class="compareContents result">
+                <div class="flexOne">
+                    <h3>*문서_1_2023년_17._FEM1-FOU-FM1-ER-0016 (coming project).pdf (기준 파일)</h3>
+                    <div class="resultArea">
+                        <h4>Label</h4>
+                        <ul>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                        </ul>
+                    </div>
                 </div>
-                <select>
-                    <option>10개씩 보기</option>
-                    <option>20개씩 보기</option>
-                    <option>50개씩 보기</option>
-                    <option>100개씩 보기</option>
-                </select>
+                <span class="loading ing"></span> <!-- ing 클래스 : 돌아감 -->
+                <div class="flexOne">
+                    <h3>*문서_1_2023년_17._FEM1-FOU-FM1-ER-0016 (coming project).pdf (기준 파일)</h3>
+                    <div class="resultArea">
+                        <h4>Label</h4>
+                        <ul>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                            <li>2.2.1 Leading Standards</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btnsRight">
+                    <a href="#" class="btn_loading">비교중</a>
+                    <a href="#" class="btn_download">다운로드</a>
+                </div>
             </div>
-            <!-- paging// -->
         </section>
         <!-- //footer -->
         <footer id="footer">Copyright 2024 theMiracleSoft. All Rights Reserved.</footer>
@@ -216,7 +148,7 @@
     <section class="contextBox">
         <a href="#" onclick="init.openLayer('shareActiveLayer');return false;">공유하기</a>
         <a href="#">즐겨찾기 추가</a>
-        <a href="#" class="compareFile">파일 비교</a>
+        <a href="#" onclick="init.openLayer('folderCompareLayer');return false;" class="compareFile">파일 비교</a>
         <a href="#" class="changeName">이름 바꾸기</a>
         <a href="#" onclick="init.openLayer('folderMoveLayer');return false;">이동 또는 복사</a>
         <a href="#">다운로드</a>
@@ -352,6 +284,50 @@
         <a href="#" class="closeBtn" onclick="init.closeLayer('folderMoveLayer');return false;"><span class="ir">닫기</span></a>
     </section>
     <!-- 폴더 선택 팝업// -->
+    <!-- //폴더 비교 선택 팝업 -->
+    <section class="folderCompareLayer" id="folderCompareLayer">
+        <h2>폴더 선택</h2>
+        <div class="folderMoveContents">
+            <table class="colTable">
+                <colgroup>
+                    <col style="width:auto"/>
+                    <col style="width:90px"/>
+                    <col style="width:90px"/>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col" class="alignLeft">이름</th>
+                        <th scope="col">크기</th>
+                        <th scope="col">수정한 날짜</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="alignLeft">
+                            <i class="icon_folder"></i> 폴더
+                        </td>
+                        <td>4.6 MB</td>
+                        <td>9일 전</td>
+                    </tr>
+                    <tr>
+                        <td class="alignLeft" colspan="3">
+                            <ul class="selectFileUl">
+                                <li>
+                                    <input type="checkbox" name="file_select" id="file_select_1"/>
+                                    <label for="file_select_1">문서_2_2022년_HL-BOP-RAM-DESSPC-00002 (previous project).pdf</label>
+                                </li>
+                            </ul>                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="btnsWrap">
+            <a href="#" onclick="init.closeLayer('folderCompareLayer');return false;" class="btnSelect">선택</a>
+        </div>
+        <a href="#" class="closeBtn" onclick="init.closeLayer('folderCompareLayer');return false;"><span class="ir">닫기</span></a>
+    </section>
+    <!-- 폴더 비교 선택 팝업// -->
 </div>
 </body>
 </html>

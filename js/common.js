@@ -42,11 +42,11 @@ const init = {
             if(!clickedobj.parents().hasClass('contextBox')){
                 $('.contextBox').hide();
             }
-            return false;
+            // return false;
         });
         $('.contextBox a').bind('click',function(){
             $('.contextBox').hide();
-            return false;
+            // return false;
         });
     },
     closeAddLayer : function(e){
@@ -58,7 +58,7 @@ const init = {
                 }
                 $('.addLayer').hide();
             }
-            return false;
+            // return false;
         });
         $('.addLayer div').bind('click',function(){
             let clickedVal = $(this).text();

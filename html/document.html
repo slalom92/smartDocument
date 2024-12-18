@@ -48,11 +48,18 @@
                 <select>
                     <option value="">공통</option>
                 </select>                
-                <a href="#">검색영역</a>
+                <!-- <a href="#">검색영역</a> -->
                 <a href="#">검색</a>
                 <a href="#">AI검색</a>
                 <a href="#">알림</a>
-                <a href="#">계정</a>
+                <a href="#" onclick="$('.accoungUtil').toggle();return false;">계정</a>
+                <div class="accoungUtil">
+                    <div class="wrapper">
+                        <h4>부서명</h4>
+                        <a href="#" class="btn_history">비교 히스토리</a>
+                        <a href="#" class="btn_log"><i class="icon_logout"></i>로그아웃</a>
+                    </div>
+                </div>
             </div>
         </article>
         <section class="utilArea">
@@ -120,14 +127,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="rightClickable">
+                    <tr class="">
                         <td class="center">
                             <input type="checkbox" name="" title="선택" class="checkboxType1"/>
                         </td>
                         <td class="alignRight">
                             <a href="#"><img src="../images/common/icon_folder.png" alt="폴더"/></a>
                         </td>
-                        <td class="pl20">
+                        <td class="pl20 rightClickable">
                             <div class="folderName">폴더명</div>
                         </td>
                         <td class="center">
@@ -139,14 +146,14 @@
                         <td class="alignRight">4.6 MB</td>
                         <td class="pl20">5시간 전</td>
                     </tr>
-                    <tr class="rightClickable">
+                    <tr class="">
                         <td class="center">
                             <input type="checkbox" name="" title="선택" class="checkboxType1"/>
                         </td>
                         <td class="alignRight">
                             <a href="#"><img src="../images/common/img_exl.png" alt="엑셀"/></a>
                         </td>
-                        <td class="pl20">
+                        <td class="pl20 rightClickable">
                             <div class="folderName">폴더명</div>
                         </td>
                         <td class="center">
@@ -158,14 +165,14 @@
                         <td class="alignRight">4.6 MB</td>
                         <td class="pl20">5시간 전</td>
                     </tr>
-                    <tr class="rightClickable">
+                    <tr class="">
                         <td class="center">
                             <input type="checkbox" name="" title="선택" class="checkboxType1"/>
                         </td>
                         <td class="alignRight">
                             <a href="#"><img src="../images/common/img_han.png" alt="한글"/></a>
                         </td>
-                        <td class="pl20">
+                        <td class="pl20 rightClickable">
                             <div class="folderName">폴더명</div>
                         </td>
                         <td class="center">
@@ -177,14 +184,14 @@
                         <td class="alignRight">4.6 MB</td>
                         <td class="pl20">5시간 전</td>
                     </tr>
-                    <tr class="rightClickable">
+                    <tr class="">
                         <td class="center">
                             <input type="checkbox" name="" title="선택" class="checkboxType1"/>
                         </td>
                         <td class="alignRight">
                             <a href="#"><img src="../images/common/img_pdf.png" alt="PDF"/></a>
                         </td>
-                        <td class="pl20">
+                        <td class="pl20 rightClickable">
                             <div class="folderName">폴더명</div>
                         </td>
                         <td class="center">
@@ -196,14 +203,14 @@
                         <td class="alignRight">4.6 MB</td>
                         <td class="pl20">5시간 전</td>
                     </tr>
-                    <tr class="rightClickable">
+                    <tr class="">
                         <td class="center">
                             <input type="checkbox" name="" title="선택" class="checkboxType1"/>
                         </td>
                         <td class="alignRight">
                             <a href="#"><img src="../images/common/img_ppt.png" alt="파워포인트"/></a>
                         </td>
-                        <td class="pl20">
+                        <td class="pl20 rightClickable">
                             <div class="folderName">폴더명</div>
                         </td>
                         <td class="center">
@@ -215,14 +222,14 @@
                         <td class="alignRight">4.6 MB</td>
                         <td class="pl20">5시간 전</td>
                     </tr>
-                    <tr class="rightClickable">
+                    <tr class="">
                         <td class="center">
                             <input type="checkbox" name="" title="선택" class="checkboxType1"/>
                         </td>
                         <td class="alignRight">
                             <a href="#"><img src="../images/common/img_txt.png" alt="메모장"/></a>
                         </td>
-                        <td class="pl20">
+                        <td class="pl20 rightClickable">
                             <div class="folderName">폴더명</div>
                         </td>
                         <td class="center">
@@ -234,14 +241,14 @@
                         <td class="alignRight">4.6 MB</td>
                         <td class="pl20">5시간 전</td>
                     </tr>
-                    <tr class="rightClickable">
+                    <tr class="">
                         <td class="center">
                             <input type="checkbox" name="" title="선택" class="checkboxType1"/>
                         </td>
                         <td class="alignRight">
                             <a href="#"><img src="../images/common/img_word.png" alt="워드"/></a>
                         </td>
-                        <td class="pl20">
+                        <td class="pl20 rightClickable">
                             <div class="folderName">폴더명</div>
                         </td>
                         <td class="center">
@@ -286,7 +293,7 @@
     <section class="contextBox">
         <a href="#" onclick="init.openLayer('shareActiveLayer');return false;">공유하기</a>
         <a href="#">즐겨찾기 추가</a>
-        <a href="#" class="compareFile">파일 비교</a>
+        <a href="#" onclick="init.openLayer('folderCompareLayer');return false;" class="compareFile">파일 비교</a>
         <a href="#" class="changeName">이름 바꾸기</a>
         <a href="#" onclick="init.openLayer('folderMoveLayer');return false;">이동 또는 복사</a>
         <a href="#">다운로드</a>
@@ -422,6 +429,50 @@
         <a href="#" class="closeBtn" onclick="init.closeLayer('folderMoveLayer');return false;"><span class="ir">닫기</span></a>
     </section>
     <!-- 폴더 선택 팝업// -->
+    <!-- //폴더 비교 선택 팝업 -->
+    <section class="folderCompareLayer" id="folderCompareLayer">
+        <h2>폴더 선택</h2>
+        <div class="folderMoveContents">
+            <table class="colTable">
+                <colgroup>
+                    <col style="width:auto"/>
+                    <col style="width:90px"/>
+                    <col style="width:90px"/>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col" class="alignLeft">이름</th>
+                        <th scope="col">크기</th>
+                        <th scope="col">수정한 날짜</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="alignLeft">
+                            <i class="icon_folder"></i> 폴더
+                        </td>
+                        <td>4.6 MB</td>
+                        <td>9일 전</td>
+                    </tr>
+                    <tr>
+                        <td class="alignLeft" colspan="3">
+                            <ul class="selectFileUl">
+                                <li>
+                                    <input type="checkbox" name="file_select" id="file_select_1"/>
+                                    <label for="file_select_1">문서_2_2022년_HL-BOP-RAM-DESSPC-00002 (previous project).pdf</label>
+                                </li>
+                            </ul>                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="btnsWrap">
+            <a href="#" onclick="init.closeLayer('folderCompareLayer');return false;" class="btnSelect">선택</a>
+        </div>
+        <a href="#" class="closeBtn" onclick="init.closeLayer('folderCompareLayer');return false;"><span class="ir">닫기</span></a>
+    </section>
+    <!-- 폴더 비교 선택 팝업// -->
 </div>
 </body>
 </html>
