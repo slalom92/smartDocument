@@ -1709,6 +1709,8 @@ a.skipNaviBtn:active {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
 }
 .folderMoveLayer h2, .folderCompareLayer h2 {
+  position: relative;
+  z-index: 9;
   display: inline-block;
   padding: 15px 90px 15px 20px;
   font-weight: normal;
@@ -1717,6 +1719,8 @@ a.skipNaviBtn:active {
   border-bottom: 2px solid #009956;
 }
 .folderMoveLayer .folderMoveContents, .folderCompareLayer .folderMoveContents {
+  position: relative;
+  z-index: 9;
   overflow-y: auto;
   height: 281px;
   margin: 10px 0 0 0;
@@ -1725,6 +1729,8 @@ a.skipNaviBtn:active {
   background: #fff;
 }
 .folderMoveLayer .colTable, .folderCompareLayer .colTable {
+  position: relative;
+  z-index: 9;
   table-layout: fixed;
   width: 100%;
 }
@@ -1811,6 +1817,19 @@ a.skipNaviBtn:active {
   height: 13px;
   margin-top: 0;
   background: url(../images/common/icon_close.png) 0 0 no-repeat;
+}
+.folderMoveLayer:not([style*="display:none"]) + .dimmed, .folderCompareLayer:not([style*="display:none"]) + .dimmed {
+  display: none;
+}
+.folderMoveLayer + .dimmed, .folderCompareLayer + .dimmed {
+  display: none;
+  position: absolute;
+  z-index: 8;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.07);
 }
 
 /* 추가 레이어 */

@@ -293,7 +293,7 @@
     <section class="contextBox">
         <a href="#" onclick="init.openLayer('shareActiveLayer');return false;">공유하기</a>
         <a href="#">즐겨찾기 추가</a>
-        <a href="#" onclick="init.openLayer('folderCompareLayer');return false;" class="compareFile">파일 비교</a>
+        <a href="#" onclick="init.openLayer('folderCompareLayer');$('.dimmed').show();return false;" class="compareFile">파일 비교</a>
         <a href="#" class="changeName">이름 바꾸기</a>
         <a href="#" onclick="init.openLayer('folderMoveLayer');return false;">이동 또는 복사</a>
         <a href="#">다운로드</a>
@@ -468,10 +468,11 @@
             </table>
         </div>
         <div class="btnsWrap">
-            <a href="#" onclick="init.closeLayer('folderCompareLayer');return false;" class="btnSelect">선택</a>
+            <a href="#" onclick="init.closeLayer('folderCompareLayer');$('.dimmed').hide();return false;" class="btnSelect">선택</a>
         </div>
-        <a href="#" class="closeBtn" onclick="init.closeLayer('folderCompareLayer');return false;"><span class="ir">닫기</span></a>
+        <a href="#" class="closeBtn" onclick="init.closeLayer('folderCompareLayer');$('.dimmed').hide();return false;"><span class="ir">닫기</span></a>
     </section>
+    <div class="dimmed"></div>
     <!-- 폴더 비교 선택 팝업// -->
 </div>
 </body>
