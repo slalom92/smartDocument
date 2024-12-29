@@ -1237,20 +1237,13 @@ a.skipNaviBtn:active {
   background: none;
   font-size: 15px;
 }
-#contents .compareContents {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px 94px;
-  padding: 17px 47px 0;
-  /* result */
-}
-#contents .compareContents .btnsRight {
+#contents .btnsRight {
   display: flex;
   justify-content: flex-end;
   width: 100%;
+  padding-right: 47px;
 }
-#contents .compareContents .btnsRight a {
+#contents .btnsRight a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1260,21 +1253,54 @@ a.skipNaviBtn:active {
   font-size: 15px;
   border-radius: 4px;
 }
-#contents .compareContents .btnsRight a.btn_compare {
+#contents .btnsRight a.btn_compare {
   background: #0a9d5c;
 }
-#contents .compareContents .btnsRight a.btn_loading {
+#contents .btnsRight a.btn_loading {
   background: #7860f4;
 }
-#contents .compareContents .btnsRight a.btn_download {
+#contents .btnsRight a.btn_download {
   background: #ff701e;
+}
+#contents .btnsRightBottom {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 47px 0 0;
+  gap: 10px;
+}
+#contents .btnsRightBottom a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 74px;
+  height: 27px;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 4px;
+}
+#contents .btnsRightBottom a.btn_compare {
+  background: #0a9d5c;
+}
+#contents .btnsRightBottom a.btn_loading {
+  background: #7860f4;
+}
+#contents .btnsRightBottom a.btn_download {
+  background: #ff701e;
+}
+#contents .compareContents {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 20px 19px;
+  padding: 17px 47px 0;
+  /* result */
 }
 #contents .compareContents .flexOne {
   position: relative;
   z-index: 1;
   flex: 1;
   flex-basis: auto;
-  padding: 43px 54px;
+  padding: 43px 72px;
   background: #f5f8fa;
   border: 1px solid #e3e3e3;
   border-radius: 6px;
@@ -1306,7 +1332,7 @@ a.skipNaviBtn:active {
   background-repeat: no-repeat;
 }
 #contents .compareContents .flexOne .selectArea .detailSelect {
-  display: none;
+  display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 0 10px;
@@ -1341,16 +1367,20 @@ a.skipNaviBtn:active {
   border-radius: 6px;
   border: 1px solid #e3e3e3;
 }
-#contents .compareContents .flexOne:nth-child(1)::after {
-  content: "";
+#contents .compareContents .flexOne .btnsLeft {
   position: absolute;
-  z-index: 1;
-  top: 0;
-  right: -49px;
+  left: 20px;
+  top: 50%;
+  display: flex;
+  width: 28px;
+  margin: 50px 0 0 0;
+  flex-direction: column;
+  gap: 8px;
+}
+#contents .compareContents .flexOne .btnsLeft a {
   display: block;
-  width: 1px;
-  height: 100%;
-  background: #e1e6ea;
+  width: 28px;
+  height: 28px;
 }
 #contents .compareContents table.colTable tbody tr:hover td {
   background: #fff;
@@ -1376,7 +1406,7 @@ a.skipNaviBtn:active {
   font-size: 17px;
 }
 #contents .compareContents table.colTable .historyTdWrap .status_1 {
-  background: url(../images/common/status_1.png) top center no-repeat;
+  background: url(../images/common/compare.gif) top center no-repeat;
 }
 #contents .compareContents table.colTable .historyTdWrap .status_2 {
   background: url(../images/common/status_2.png) top center no-repeat;
@@ -1384,6 +1414,9 @@ a.skipNaviBtn:active {
 #contents .compareContents.result {
   align-items: center;
   gap: 25px;
+}
+#contents .compareContents.result .flexOne {
+  padding: 43px 54px;
 }
 #contents .compareContents.result .flexOne h3 {
   text-align: center;
@@ -1431,21 +1464,11 @@ a.skipNaviBtn:active {
 #contents .compareContents.result .flexOne:nth-child(1)::after {
   display: none;
 }
-@media (min-width: 720px) {
-  #contents .compareContents.result .loading {
-    display: block;
-    width: 100%;
-    height: 34px;
-    background: url(../images/common/loading.png) center no-repeat;
-  }
-}
-@media (min-width: 1900px) {
-  #contents .compareContents.result .loading {
-    display: block;
-    width: 48px;
-    height: 34px;
-    background: url(../images/common/loading.png) center no-repeat;
-  }
+#contents .compareContents.result .loading {
+  display: block;
+  width: 45px;
+  height: 38px;
+  background: url(../images/common/loading.png) center no-repeat;
 }
 #contents .compareContents.result .loading.ing {
   -webkit-animation: spin 2s linear infinite;
@@ -1766,21 +1789,34 @@ a.skipNaviBtn:active {
 .folderMoveLayer .colTable tbody tr:last-child td, .folderCompareLayer .colTable tbody tr:last-child td {
   border-bottom: none;
 }
-.folderMoveLayer .colTable tbody .selectFileUl, .folderCompareLayer .colTable tbody .selectFileUl {
-  padding: 13px 0;
-}
-.folderMoveLayer .colTable tbody .selectFileUl li, .folderCompareLayer .colTable tbody .selectFileUl li {
+.folderMoveLayer .colTable tbody .selectFile, .folderCompareLayer .colTable tbody .selectFile {
   display: flex;
   gap: 0 18px;
-  align-items: flex-start;
+  align-items: center;
 }
-.folderMoveLayer .colTable tbody .selectFileUl li input[type=checkbox], .folderCompareLayer .colTable tbody .selectFileUl li input[type=checkbox] {
-  width: 21px;
-  height: 21px;
+.folderMoveLayer .colTable tbody .selectFile i, .folderCompareLayer .colTable tbody .selectFile i {
+  float: left;
+  width: 12px;
+  height: 12px;
 }
-.folderMoveLayer .colTable tbody .selectFileUl li label, .folderCompareLayer .colTable tbody .selectFileUl li label {
+.folderMoveLayer .colTable tbody .selectFile i img, .folderCompareLayer .colTable tbody .selectFile i img {
+  width: 16px;
+  vertical-align: top;
+}
+.folderMoveLayer .colTable tbody .selectFile span, .folderCompareLayer .colTable tbody .selectFile span {
+  float: left;
   line-height: 20px;
   font-size: 15px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.folderMoveLayer .colTable tbody .toggleTr, .folderCompareLayer .colTable tbody .toggleTr {
+  background: #fff;
+}
+.folderMoveLayer .colTable tbody .toggleTr.on, .folderCompareLayer .colTable tbody .toggleTr.on {
+  background: #f4f6f7;
 }
 .folderMoveLayer .btnsWrap, .folderCompareLayer .btnsWrap {
   display: flex;
@@ -1829,7 +1865,7 @@ a.skipNaviBtn:active {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.07);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 /* 추가 레이어 */

@@ -537,19 +537,28 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
         }
     }
     /* compare */
-    .compareContents{
-        display:flex;flex-wrap: wrap;justify-content: space-between;gap:20px 94px;padding:17px 47px 0;
-        .btnsRight{
-            display: flex;justify-content: flex-end;width:100%;
-            a{
-                display:flex;justify-content: center;align-items: center;width:74px;height:27px;color:$white;font-size:15px;border-radius:4px;
-                &.btn_compare{background:$green2;}
-                &.btn_loading{background:$purple;}
-                &.btn_download{background:$orange;}
-            }
+    .btnsRight{
+        display: flex;justify-content: flex-end;width:100%;padding-right:47px;
+        a{
+            display:flex;justify-content: center;align-items: center;width:74px;height:27px;color:$white;font-size:15px;border-radius:4px;
+            &.btn_compare{background:$green2;}
+            &.btn_loading{background:$purple;}
+            &.btn_download{background:$orange;}
         }
+    }
+    .btnsRightBottom{
+        display:flex;justify-content: flex-end;padding:20px 47px 0 0;gap:10px;
+        a{
+            display:flex;justify-content: center;align-items: center;width:74px;height:27px;color:$white;font-size:15px;border-radius:4px;
+            &.btn_compare{background:$green2;}
+            &.btn_loading{background:$purple;}
+            &.btn_download{background:$orange;}
+        }
+    }
+    .compareContents{
+        display:flex;flex-wrap:nowrap;justify-content: space-between;gap:20px 19px;padding:17px 47px 0;
         .flexOne{
-            position:relative;z-index:1;flex:1;flex-basis: auto;padding:43px 54px;background:#f5f8fa;border:1px solid #e3e3e3;border-radius:6px;
+            position:relative;z-index:1;flex:1;flex-basis: auto;padding:43px 72px;background:#f5f8fa;border:1px solid #e3e3e3;border-radius:6px;
             h3{
                 line-height:20px;font-size:17px;
             }
@@ -559,7 +568,7 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
                     appearance: none;-webkit-appearance: none;-moz-appearance: none;border-radius:4px;background-color:$white;background-image:url(../images/common/bg_arrow.gif);background-position:90% center;background-repeat: no-repeat;
                 }
                 .detailSelect{
-                    display: none;justify-content: flex-end;align-items: center;gap:0 10px;padding:7px 0 0 0;
+                    display: flex;justify-content: flex-end;align-items: center;gap:0 10px;padding:7px 0 0 0;
                     label{
                         font-size:15px;margin-left:4px;
                     }
@@ -574,8 +583,14 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
                     flex:1;text-align:center;border-radius:6px;border:1px solid #e3e3e3;
                 }
             }
-            &:nth-child(1)::after{
-                content:'';position:absolute;z-index:1;top:0;right:-49px;display:block;width:1px;height:100%;background:#e1e6ea;
+            // &:nth-child(1)::after{
+            //     content:'';position:absolute;z-index:1;top:0;right:-49px;display:block;width:1px;height:100%;background:#e1e6ea;
+            // }
+            .btnsLeft{
+                position:absolute;left:20px;top:50%;display:flex;width:28px;margin:50px 0 0 0;flex-direction: column;gap:8px;
+                a{
+                    display:block;width:28px;height:28px;
+                }
             }
         }
         table.colTable{
@@ -595,7 +610,7 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
                 .status{
                     display:block;padding:40px 0 0 0;font-size:17px;
                     &_1{
-                        background:url(../images/common/status_1.png) top center no-repeat;
+                        background:url(../images/common/compare.gif) top center no-repeat;
                     }
                     &_2{
                         background:url(../images/common/status_2.png) top center no-repeat;
@@ -608,6 +623,7 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
         &.result{
             align-items: center;gap:25px;
             .flexOne{
+                padding:43px 54px;
                 h3{text-align:center;}
                 .resultArea{
                     overflow-y:auto;height:352px;margin:21px auto 0;border:1px solid #e3e3e3;border-radius:6px;
@@ -640,12 +656,7 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
                 }
             }
             .loading{
-                @include tablet{
-                    display:block;width:100%;height:34px;background:url(../images/common/loading.png) center no-repeat;
-                }
-                @include desktop(){
-                    display:block;width:48px;height:34px;background:url(../images/common/loading.png) center no-repeat;
-                }
+                display:block;width:45px;height:38px;background:url(../images/common/loading.png) center no-repeat;
                 &.ing{                        
                     -webkit-animation:spin 2s linear infinite;
                     -moz-animation:spin 2s linear infinite;
@@ -793,15 +804,19 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
                     display:inline-block;width:21px;height:18px;margin-right:7px;vertical-align:middle;background:url(../images/common/icon_folder_small.png) 0 0 no-repeat;
                 }
             }
-            tr:last-child td{border-bottom:none}
-            .selectFileUl{
-                padding:13px 0;
-                li{
-                    display:flex;gap:0 18px;align-items: flex-start;
-                    input[type=checkbox]{
-                        width:21px;height:21px;
-                    }
-                    label{line-height:20px;font-size:15px;}
+            tr:last-child td{border-bottom:none}            
+            .selectFile{
+                display:flex;gap:0 18px;align-items:center;
+                i{
+                    float:left;width:12px;height:12px;
+                    img{width:16px;vertical-align: top;}
+                }
+                span{float:left;line-height:20px;font-size:15px;@include ellipsis(1);}
+            }
+            .toggleTr{
+                background:#fff;
+                &.on{
+                    background:#f4f6f7;
                 }
             }
         }
@@ -828,7 +843,7 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
         display:none;
     }
     &+.dimmed{
-        display:none;position:absolute;z-index:8;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.07);
+        display:none;position:absolute;z-index:8;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.3);
     }
 }
 /* 추가 레이어 */

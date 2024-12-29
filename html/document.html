@@ -454,18 +454,47 @@
                         <td>4.6 MB</td>
                         <td>9일 전</td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td class="alignLeft" colspan="3">
                             <ul class="selectFileUl">
                                 <li>
+                                    <i><img src="../images/common/img_ppt.png" alt="ppt"></i>
                                     <input type="checkbox" name="file_select" id="file_select_1"/>
                                     <label for="file_select_1">문서_2_2022년_HL-BOP-RAM-DESSPC-00002 (previous project).pdf</label>
+                                    <strong>2024-12-12</strong>
                                 </li>
                             </ul>                            
                         </td>
+                    </tr> -->
+                    <tr class="toggleTr">
+                        <td class="alignLeft">
+                            <div class="selectFile">
+                                <i><img src="../images/common/img_ppt.png" alt="ppt"></i>
+                                <span>문서_2_2022년_HL-BOP-RAM-DESSPC-00002 (previous project).pdf</span>
+                            </div>
+                        </td>
+                        <td>2.6 MB</td>
+                        <td>9일 전</td>
+                    </tr>
+                    <tr class="toggleTr">
+                        <td class="alignLeft">
+                            <div class="selectFile">
+                                <i><img src="../images/common/img_ppt.png" alt="ppt"></i>
+                                <span>문서_2_2022년_HL-BOP-RAM-DESSPC-00002 (previous project).pdf</span>
+                            </div>
+                        </td>
+                        <td>2.6 MB</td>
+                        <td>9일 전</td>
                     </tr>
                 </tbody>
             </table>
+            <script>
+                $(document).ready(function(){
+                    $('.toggleTr').children().bind('click',function(){
+                        $(this).parent().toggleClass('on');
+                    });
+                });
+            </script>
         </div>
         <div class="btnsWrap">
             <a href="#" onclick="init.closeLayer('folderCompareLayer');$('.dimmed').hide();return false;" class="btnSelect">선택</a>
