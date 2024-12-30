@@ -1382,6 +1382,22 @@ a.skipNaviBtn:active {
   width: 28px;
   height: 28px;
 }
+#contents .compareContents .flexOne .btnsRight {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  display: flex;
+  width: 28px;
+  margin: 50px 0 0 0;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 0;
+}
+#contents .compareContents .flexOne .btnsRight a {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
 #contents .compareContents table.colTable tbody tr:hover td {
   background: #fff;
 }
