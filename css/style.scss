@@ -60,6 +60,7 @@ $orange : #ff701e;
 $border_1:#e1e6ea;
 $border_2:#84d4b1;
 $bg_1:#8bc7ad;
+$bg_2:#005e35;
 $text_1:#baecd6;
 $text_2:#0e5435;
 $text_3:#a4a4a4;
@@ -125,21 +126,27 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
         width:calc(100% - 18px);height:calc(100% - 360px);display:flex;flex-wrap:wrap;flex-direction:column;gap:3px 0;margin:0 auto;
         a{
             display:flex;align-items:center;width:100%;height:44px;padding:0 0 0 56px;color:$text_1;font-size:13.5px;letter-spacing:0.02em;border-radius:5px;
-            &:hover{color:$text_2;}
+            &:hover{color:$white;}
             &:nth-child(1){background:url(../images/common/snb_1_off.png) 23px center no-repeat;
-                &:hover{background:$bg_1 url(../images/common/snb_1_on.png) 23px center no-repeat;}
+                &:hover{background:$bg_2 url(../images/common/snb_1_on.png) 23px center no-repeat;}
             }
             &:nth-child(2){background:url(../images/common/snb_2_off.png) 23px center no-repeat;
-                &:hover{background:$bg_1 url(../images/common/snb_2_on.png) 23px center no-repeat;}
+                &:hover{background:$bg_2 url(../images/common/snb_2_on.png) 23px center no-repeat;}
             }
             &:nth-child(3){background:url(../images/common/snb_3_off.png) 23px center no-repeat;
-                &:hover{background:$bg_1 url(../images/common/snb_3_on.png) 23px center no-repeat;}
+                &:hover{background:$bg_2 url(../images/common/snb_3_on.png) 23px center no-repeat;}
             }
             &:nth-child(4){background:url(../images/common/snb_4_off.png) 23px center no-repeat;
-                &:hover{background:$bg_1 url(../images/common/snb_4_on.png) 23px center no-repeat;}
+                &:hover{background:$bg_2 url(../images/common/snb_4_on.png) 23px center no-repeat;}
             }
             &:nth-child(5){background:url(../images/common/snb_5_off.png) 23px center no-repeat;
-                &:hover{background:$bg_1 url(../images/common/snb_5_on.png) 23px center no-repeat;}
+                &:hover{background:$bg_2 url(../images/common/snb_5_on.png) 23px center no-repeat;}
+            }
+            &:nth-child(6){background:url(../images/common/snb_6_off.png) 23px center no-repeat;
+                &:hover{background:$bg_2 url(../images/common/snb_6_on.png) 23px center no-repeat;}
+            }
+            &:nth-child(7){background:url(../images/common/snb_7_off.png) 23px center no-repeat;
+                &:hover{background:$bg_2 url(../images/common/snb_7_on.png) 23px center no-repeat;}
             }
             
         }
@@ -151,21 +158,27 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
             width:56px;height:calc(100% - 360px);
             a{
                 overflow:hidden;text-indent:-999px;font-size:0;color:transparent;
-                &:hover{color:$text_2;}
+                &:hover{color:$white;}
                 &:nth-child(1){background:url(../images/common/snb_1_off.png) center no-repeat;
-                    &:hover{background:$bg_1 url(../images/common/snb_1_on.png) center no-repeat;}
+                    &:hover{background:$bg_2 url(../images/common/snb_1_on.png) center no-repeat;}
                 }
                 &:nth-child(2){background:url(../images/common/snb_2_off.png) center no-repeat;
-                    &:hover{background:$bg_1 url(../images/common/snb_2_on.png) center no-repeat;}
+                    &:hover{background:$bg_2 url(../images/common/snb_2_on.png) center no-repeat;}
                 }
                 &:nth-child(3){background:url(../images/common/snb_3_off.png) center no-repeat;
-                    &:hover{background:$bg_1 url(../images/common/snb_3_on.png) center no-repeat;}
+                    &:hover{background:$bg_2 url(../images/common/snb_3_on.png) center no-repeat;}
                 }
                 &:nth-child(4){background:url(../images/common/snb_4_off.png) center no-repeat;
-                    &:hover{background:$bg_1 url(../images/common/snb_4_on.png) center no-repeat;}
+                    &:hover{background:$bg_2 url(../images/common/snb_4_on.png) center no-repeat;}
                 }
                 &:nth-child(5){background:url(../images/common/snb_5_off.png) center no-repeat;
-                    &:hover{background:$bg_1 url(../images/common/snb_5_on.png) center no-repeat;}
+                    &:hover{background:$bg_2 url(../images/common/snb_5_on.png) center no-repeat;}
+                }
+                &:nth-child(6){background:url(../images/common/snb_6_off.png) center no-repeat;
+                    &:hover{background:$bg_2 url(../images/common/snb_6_on.png) center no-repeat;}
+                }
+                &:nth-child(7){background:url(../images/common/snb_7_off.png) center no-repeat;
+                    &:hover{background:$bg_2 url(../images/common/snb_7_on.png) center no-repeat;}
                 }
                 
             }
@@ -174,15 +187,15 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
             width:56px;
             a{
                 width:56px;overflow:hidden;text-indent:-999px;font-size:0;color:transparent;
-                &:hover{color:$text_2;}
+                &:hover{color:$white;}
                 &:nth-child(1){background:url(../images/common/lnb_footer_1_off.png) center no-repeat;
-                    &:hover{background:$bg_1 url(../images/common/lnb_footer_1_on.png) center no-repeat;}
+                    &:hover{background:$bg_2 url(../images/common/lnb_footer_1_on.png) center no-repeat;}
                 }
                 &:nth-child(2){background:url(../images/common/lnb_footer_2_off.png) center no-repeat;
-                    &:hover{background:$bg_1 url(../images/common/lnb_footer_2_on.png) center no-repeat;}
+                    &:hover{background:$bg_2 url(../images/common/lnb_footer_2_on.png) center no-repeat;}
                 }
                 &:nth-child(3){background:url(../images/common/lnb_footer_3_off.png) center no-repeat;
-                    &:hover{background:$bg_1 url(../images/common/lnb_footer_3_on.png) center no-repeat;}
+                    &:hover{background:$bg_2 url(../images/common/lnb_footer_3_on.png) center no-repeat;}
                 }
                 
             }
@@ -192,15 +205,15 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
         width:100%;display:flex;flex-wrap:wrap;flex-direction:column;width:calc(100% - 18px);padding:23px 0 0 0;margin:auto auto 112px;border-top:1px solid $border_2;
         a{
             display:flex;align-items:center;width:100%;height:44px;padding:0 0 0 56px;color:$text_1;font-size:13.5px;letter-spacing:0.02em;border-radius:5px;
-            &:hover{color:$text_2;}
+            &:hover{color:$white;}
             &:nth-child(1){background:url(../images/common/lnb_footer_1_off.png) 23px center no-repeat;
-                &:hover{background:$bg_1 url(../images/common/lnb_footer_1_on.png) 23px center no-repeat;}
+                &:hover{background:$bg_2 url(../images/common/lnb_footer_1_on.png) 23px center no-repeat;}
             }
             &:nth-child(2){background:url(../images/common/lnb_footer_2_off.png) 23px center no-repeat;
-                &:hover{background:$bg_1 url(../images/common/lnb_footer_2_on.png) 23px center no-repeat;}
+                &:hover{background:$bg_2 url(../images/common/lnb_footer_2_on.png) 23px center no-repeat;}
             }
             &:nth-child(3){background:url(../images/common/lnb_footer_3_off.png) 23px center no-repeat;
-                &:hover{background:$bg_1 url(../images/common/lnb_footer_3_on.png) 23px center no-repeat;}
+                &:hover{background:$bg_2 url(../images/common/lnb_footer_3_on.png) 23px center no-repeat;}
             }
             
         }
@@ -251,6 +264,7 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
                 &::before{
                     content:'';position:absolute;z-index:1;top:10px;left:20px;display:block;width:1px;height:16px;background:#9e9e9e;
                 }
+                &.mr0{margin-right:0;}
             }
             &>a{
                 overflow:hidden;display:block;align-items:center;text-indent:-999px;font-size:0;color:transparent;
@@ -306,6 +320,9 @@ a.skipNaviBtn{position: absolute;z-index:100;background:none repeat scroll 0 0 #
             &:hover{
                 background:url(../images/common/icon_type_on.png) 0 0 no-repeat;
             }
+        }
+        .btnSetting{
+            display:block;width:25px;height:23px;margin:0 22px 0 auto;background:url(../images/common/icon_setting.png) 0 0 no-repeat;overflow:hidden;text-indent:-999px;font-size:0;color:transparent;
         }
         .tagSelect{
             position:relative;z-index:1;display:flex;align-items: center;width:60%;height:40px;min-width:720px;padding:0 34px;margin-left:18px;color:#929292;background:$white;border:1px solid $border_1;border-radius:3px;

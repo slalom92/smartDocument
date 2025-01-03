@@ -272,37 +272,49 @@ a.skipNaviBtn:active {
   border-radius: 5px;
 }
 #snb nav a:hover {
-  color: #0e5435;
+  color: #fff;
 }
 #snb nav a:nth-child(1) {
   background: url(../images/common/snb_1_off.png) 23px center no-repeat;
 }
 #snb nav a:nth-child(1):hover {
-  background: #8bc7ad url(../images/common/snb_1_on.png) 23px center no-repeat;
+  background: #005e35 url(../images/common/snb_1_on.png) 23px center no-repeat;
 }
 #snb nav a:nth-child(2) {
   background: url(../images/common/snb_2_off.png) 23px center no-repeat;
 }
 #snb nav a:nth-child(2):hover {
-  background: #8bc7ad url(../images/common/snb_2_on.png) 23px center no-repeat;
+  background: #005e35 url(../images/common/snb_2_on.png) 23px center no-repeat;
 }
 #snb nav a:nth-child(3) {
   background: url(../images/common/snb_3_off.png) 23px center no-repeat;
 }
 #snb nav a:nth-child(3):hover {
-  background: #8bc7ad url(../images/common/snb_3_on.png) 23px center no-repeat;
+  background: #005e35 url(../images/common/snb_3_on.png) 23px center no-repeat;
 }
 #snb nav a:nth-child(4) {
   background: url(../images/common/snb_4_off.png) 23px center no-repeat;
 }
 #snb nav a:nth-child(4):hover {
-  background: #8bc7ad url(../images/common/snb_4_on.png) 23px center no-repeat;
+  background: #005e35 url(../images/common/snb_4_on.png) 23px center no-repeat;
 }
 #snb nav a:nth-child(5) {
   background: url(../images/common/snb_5_off.png) 23px center no-repeat;
 }
 #snb nav a:nth-child(5):hover {
-  background: #8bc7ad url(../images/common/snb_5_on.png) 23px center no-repeat;
+  background: #005e35 url(../images/common/snb_5_on.png) 23px center no-repeat;
+}
+#snb nav a:nth-child(6) {
+  background: url(../images/common/snb_6_off.png) 23px center no-repeat;
+}
+#snb nav a:nth-child(6):hover {
+  background: #005e35 url(../images/common/snb_6_on.png) 23px center no-repeat;
+}
+#snb nav a:nth-child(7) {
+  background: url(../images/common/snb_7_off.png) 23px center no-repeat;
+}
+#snb nav a:nth-child(7):hover {
+  background: #005e35 url(../images/common/snb_7_on.png) 23px center no-repeat;
 }
 #snb.on {
   width: 73px;
@@ -332,37 +344,49 @@ a.skipNaviBtn:active {
   color: transparent;
 }
 #snb.on nav a:hover {
-  color: #0e5435;
+  color: #fff;
 }
 #snb.on nav a:nth-child(1) {
   background: url(../images/common/snb_1_off.png) center no-repeat;
 }
 #snb.on nav a:nth-child(1):hover {
-  background: #8bc7ad url(../images/common/snb_1_on.png) center no-repeat;
+  background: #005e35 url(../images/common/snb_1_on.png) center no-repeat;
 }
 #snb.on nav a:nth-child(2) {
   background: url(../images/common/snb_2_off.png) center no-repeat;
 }
 #snb.on nav a:nth-child(2):hover {
-  background: #8bc7ad url(../images/common/snb_2_on.png) center no-repeat;
+  background: #005e35 url(../images/common/snb_2_on.png) center no-repeat;
 }
 #snb.on nav a:nth-child(3) {
   background: url(../images/common/snb_3_off.png) center no-repeat;
 }
 #snb.on nav a:nth-child(3):hover {
-  background: #8bc7ad url(../images/common/snb_3_on.png) center no-repeat;
+  background: #005e35 url(../images/common/snb_3_on.png) center no-repeat;
 }
 #snb.on nav a:nth-child(4) {
   background: url(../images/common/snb_4_off.png) center no-repeat;
 }
 #snb.on nav a:nth-child(4):hover {
-  background: #8bc7ad url(../images/common/snb_4_on.png) center no-repeat;
+  background: #005e35 url(../images/common/snb_4_on.png) center no-repeat;
 }
 #snb.on nav a:nth-child(5) {
   background: url(../images/common/snb_5_off.png) center no-repeat;
 }
 #snb.on nav a:nth-child(5):hover {
-  background: #8bc7ad url(../images/common/snb_5_on.png) center no-repeat;
+  background: #005e35 url(../images/common/snb_5_on.png) center no-repeat;
+}
+#snb.on nav a:nth-child(6) {
+  background: url(../images/common/snb_6_off.png) center no-repeat;
+}
+#snb.on nav a:nth-child(6):hover {
+  background: #005e35 url(../images/common/snb_6_on.png) center no-repeat;
+}
+#snb.on nav a:nth-child(7) {
+  background: url(../images/common/snb_7_off.png) center no-repeat;
+}
+#snb.on nav a:nth-child(7):hover {
+  background: #005e35 url(../images/common/snb_7_on.png) center no-repeat;
 }
 #snb.on #snbFooter {
   width: 56px;
@@ -375,25 +399,25 @@ a.skipNaviBtn:active {
   color: transparent;
 }
 #snb.on #snbFooter a:hover {
-  color: #0e5435;
+  color: #fff;
 }
 #snb.on #snbFooter a:nth-child(1) {
   background: url(../images/common/lnb_footer_1_off.png) center no-repeat;
 }
 #snb.on #snbFooter a:nth-child(1):hover {
-  background: #8bc7ad url(../images/common/lnb_footer_1_on.png) center no-repeat;
+  background: #005e35 url(../images/common/lnb_footer_1_on.png) center no-repeat;
 }
 #snb.on #snbFooter a:nth-child(2) {
   background: url(../images/common/lnb_footer_2_off.png) center no-repeat;
 }
 #snb.on #snbFooter a:nth-child(2):hover {
-  background: #8bc7ad url(../images/common/lnb_footer_2_on.png) center no-repeat;
+  background: #005e35 url(../images/common/lnb_footer_2_on.png) center no-repeat;
 }
 #snb.on #snbFooter a:nth-child(3) {
   background: url(../images/common/lnb_footer_3_off.png) center no-repeat;
 }
 #snb.on #snbFooter a:nth-child(3):hover {
-  background: #8bc7ad url(../images/common/lnb_footer_3_on.png) center no-repeat;
+  background: #005e35 url(../images/common/lnb_footer_3_on.png) center no-repeat;
 }
 #snb #snbFooter {
   width: 100%;
@@ -417,25 +441,25 @@ a.skipNaviBtn:active {
   border-radius: 5px;
 }
 #snb #snbFooter a:hover {
-  color: #0e5435;
+  color: #fff;
 }
 #snb #snbFooter a:nth-child(1) {
   background: url(../images/common/lnb_footer_1_off.png) 23px center no-repeat;
 }
 #snb #snbFooter a:nth-child(1):hover {
-  background: #8bc7ad url(../images/common/lnb_footer_1_on.png) 23px center no-repeat;
+  background: #005e35 url(../images/common/lnb_footer_1_on.png) 23px center no-repeat;
 }
 #snb #snbFooter a:nth-child(2) {
   background: url(../images/common/lnb_footer_2_off.png) 23px center no-repeat;
 }
 #snb #snbFooter a:nth-child(2):hover {
-  background: #8bc7ad url(../images/common/lnb_footer_2_on.png) 23px center no-repeat;
+  background: #005e35 url(../images/common/lnb_footer_2_on.png) 23px center no-repeat;
 }
 #snb #snbFooter a:nth-child(3) {
   background: url(../images/common/lnb_footer_3_off.png) 23px center no-repeat;
 }
 #snb #snbFooter a:nth-child(3):hover {
-  background: #8bc7ad url(../images/common/lnb_footer_3_on.png) 23px center no-repeat;
+  background: #005e35 url(../images/common/lnb_footer_3_on.png) 23px center no-repeat;
 }
 
 #contents {
@@ -549,6 +573,9 @@ a.skipNaviBtn:active {
   width: 1px;
   height: 16px;
   background: #9e9e9e;
+}
+#contents #gnb .rightMenu select.mr0 {
+  margin-right: 0;
 }
 #contents #gnb .rightMenu > a {
   overflow: hidden;
@@ -688,6 +715,17 @@ a.skipNaviBtn:active {
 }
 #contents .utilArea .btnType:hover {
   background: url(../images/common/icon_type_on.png) 0 0 no-repeat;
+}
+#contents .utilArea .btnSetting {
+  display: block;
+  width: 25px;
+  height: 23px;
+  margin: 0 22px 0 auto;
+  background: url(../images/common/icon_setting.png) 0 0 no-repeat;
+  overflow: hidden;
+  text-indent: -999px;
+  font-size: 0;
+  color: transparent;
 }
 #contents .utilArea .tagSelect {
   position: relative;
